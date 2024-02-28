@@ -12,7 +12,7 @@ namespace UnityTweenPlayables.Core {
     public abstract class TweenPlayableTrack<TBinding, TMixerBehaviour, TBehaviour> : TrackAsset
         where TBinding : Component
         where TMixerBehaviour : TweenMixerPlayableBehaviour<TBinding, TBehaviour>, new()
-        where TBehaviour : TweenPlayableBehaviour<TBinding> {
+        where TBehaviour : TweenPlayableBehaviour<TBinding>, new() {
         /// <summary>
         /// Mixerの生成
         /// </summary>
