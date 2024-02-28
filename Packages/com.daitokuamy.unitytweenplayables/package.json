@@ -1,0 +1,14 @@
+{
+    "name": "com.daitokuamy.unitytweenplayables",
+    "displayName": "UnityTweenPlayables",
+    "version": "0.9.0",
+    "unity": "2022.3",
+    "license" : "MIT",
+    "dependencies": { },
+    "author": {
+        "name": "Hironori Ito",
+        "url": "https://github.com/DaitokuAmy"
+    },
+    "type": "timeline extensions",
+    "description": "This is an extension package for Unity's Timeline for Tween operations."
+}
