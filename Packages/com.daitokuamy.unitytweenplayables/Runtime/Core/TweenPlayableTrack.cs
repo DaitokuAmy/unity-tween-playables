@@ -17,6 +17,17 @@ namespace UnityTweenPlayables.Core {
         /// Mixerの生成
         /// </summary>
         public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount) {
+            foreach (var timelineClip in GetClips()) {
+                if (timelineClip.asset is ITweenPlayableClip clip) {
+                    clip.SetDuration(timelineClip.duration);
+#if UNITY_EDITOR
+                    if (!string.IsNullOrEmpty(clip.DisplayName)) {
+                        timelineClip.displayName = clip.DisplayName;
+                    }
+#endif
+                }
+            }
+
             return ScriptPlayable<TMixerBehaviour>.Create(graph, inputCount);
         }
 
@@ -25,7 +36,7 @@ namespace UnityTweenPlayables.Core {
         /// </summary>
         public override void GatherProperties(PlayableDirector director, IPropertyCollector driver) {
             base.GatherProperties(director, driver);
-            
+
 #if UNITY_EDITOR
             var component = director.GetGenericBinding(this) as TBinding;
             if (component == null) {

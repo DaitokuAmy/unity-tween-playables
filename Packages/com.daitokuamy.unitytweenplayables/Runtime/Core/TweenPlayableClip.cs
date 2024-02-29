@@ -7,12 +7,20 @@ namespace UnityTweenPlayables.Core {
     /// TweenPlayableClipの共通インターフェース
     /// </summary>
     public interface ITweenPlayableClip {
+        /// <summary>表示名</summary>
+        string DisplayName { get; }
+        
+        /// <summary>
+        /// Clipの長さを設定
+        /// </summary>
+        void SetDuration(double duration);
+
         /// <summary>
         /// Clipの長さを取得
         /// </summary>
         double GetDuration();
     }
-    
+
     /// <summary>
     /// TweenPlayable用のPlayableAsset基底
     /// </summary>
@@ -21,8 +29,13 @@ namespace UnityTweenPlayables.Core {
         [SerializeField, Tooltip("振る舞い指定用のComponent")]
         private TBehaviour _behaviour = new();
 
+        private double _duration;
+
         /// <summary>TimelineClipのサポート機能属性</summary>
         ClipCaps ITimelineClipAsset.clipCaps => ClipCaps.Blending | ClipCaps.Extrapolation;
+
+        /// <summary>表示名</summary>
+        public virtual string DisplayName => GetType().Name.Replace("TweenPlayableClip", "");
 
         /// <summary>
         /// Playableの生成
@@ -34,10 +47,17 @@ namespace UnityTweenPlayables.Core {
         }
 
         /// <summary>
+        /// Clipの長さを設定
+        /// </summary>
+        void ITweenPlayableClip.SetDuration(double duration) {
+            _duration = duration;
+        }
+
+        /// <summary>
         /// Clipの長さを取得
         /// </summary>
         double ITweenPlayableClip.GetDuration() {
-            return duration;
+            return _duration;
         }
     }
 }

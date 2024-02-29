@@ -36,9 +36,11 @@ namespace UnityTweenPlayables.Core {
                     for (var i = 0; i < inputCount; i++) {
                         var input = (ScriptPlayable<TBehaviour>)playable.GetInput(i);
                         _playables.Add(input);
+                    }
 
-                        // Behaviourの初期化
-                        input.GetBehaviour().Setup(_targetComponent);
+                    // Behaviourの初期化
+                    for (var i = 0; i < _playables.Count; i++) {
+                        _playables[i].GetBehaviour().Setup(_targetComponent);
                     }
                 }
                 else {
@@ -49,6 +51,7 @@ namespace UnityTweenPlayables.Core {
 
             var activeInputCount = 0;
             var lastBehaviour = default(TBehaviour);
+            var lastActiveBehaviour = default(TBehaviour);
             
             // ブレンドに必要なパラメータ計算
             for (var i = 0; i < inputCount; i++) {
@@ -65,6 +68,7 @@ namespace UnityTweenPlayables.Core {
                     continue;
                 }
 
+                lastActiveBehaviour = behaviour;
                 Blend(_targetComponent, behaviour, inputWeight, progress);
                 activeInputCount++;
             }
@@ -72,11 +76,15 @@ namespace UnityTweenPlayables.Core {
             // WeightがあるInputがない場合は、最後のBehaviourの値を適用
             if (activeInputCount == 0) {
                 if (lastBehaviour != null) {
+                    lastActiveBehaviour = lastBehaviour;
                     Blend(_targetComponent, lastBehaviour, 1, 1);
                 }
             }
 
-            Apply(_targetComponent);
+            // 値の反映
+            if (lastActiveBehaviour != null) {
+                Apply(_targetComponent, lastActiveBehaviour);
+            }
         }
 
         /// <summary>
@@ -92,6 +100,18 @@ namespace UnityTweenPlayables.Core {
         /// 値の反映
         /// </summary>
         /// <param name="component">変更対象のComponent</param>
-        protected abstract void Apply(TBinding component);
+        /// <param name="lastBehaviour">最後に評価された振る舞いクラス</param>
+        protected abstract void Apply(TBinding component, TBehaviour lastBehaviour);
+
+        /// <summary>
+        /// ValueMixerへのブレンド反映
+        /// </summary>
+        protected static void BlendValueMixer<T>(ValueMixer<T> mixer, TweenParameter<T> tweenParameter, object component, float weight, float progress) {
+            if (!tweenParameter.active) {
+                return;
+            }
+            
+            mixer.Blend(tweenParameter.Evaluate(component, progress), weight);
+        }
     }
 }

@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.daitokuamy.unityrenametool": {
+      "version": "https://github.com/DaitokuAmy/unity-rename-tool.git?path=/Packages/com.daitokuamy.unityrenametool",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "ceeb8745ed2e9ee496834e30a0580e17737f3ad0"
+    },
     "com.daitokuamy.unitytweenplayables": {
       "version": "file:com.daitokuamy.unitytweenplayables",
       "depth": 0,
