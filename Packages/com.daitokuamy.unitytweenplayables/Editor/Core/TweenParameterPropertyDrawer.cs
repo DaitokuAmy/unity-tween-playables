@@ -14,7 +14,7 @@ namespace UnityTweenPlayables.Editor.Core {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
             // Active状態の時にタイトル名にアイコンを付ける
             var active = property.FindPropertyRelative("active").boolValue;
-            var iconContent = EditorGUIUtility.IconContent(active ? "d_greenLight" : "d_redLight");
+            var iconContent = EditorGUIUtility.IconContent(active ? "P4_CheckOutRemote" : "Valid");
             iconContent.text = label.text;
             iconContent.tooltip = label.tooltip;
             
