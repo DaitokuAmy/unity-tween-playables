@@ -10,6 +10,9 @@ namespace UnityTweenPlayables.UI {
     public class RectTransformTweenPlayableBehaviour : TweenPlayableBehaviour<RectTransform> {
         public Vector3TweenParameter anchoredPosition;
         public Vector2TweenParameter sizeDelta;
+        public Vector2TweenParameter anchorMin;
+        public Vector2TweenParameter anchorMax;
+        public Vector2TweenParameter pivot;
         public Vector3TweenParameter rotation;
         public Vector3TweenParameter scale;
 
@@ -19,6 +22,9 @@ namespace UnityTweenPlayables.UI {
         protected override void SetupInternal(RectTransform playerData) {
             anchoredPosition.SetInitialValue(playerData, playerData.anchoredPosition3D);
             sizeDelta.SetInitialValue(playerData, playerData.sizeDelta);
+            anchorMin.SetInitialValue(playerData, playerData.anchorMin);
+            anchorMax.SetInitialValue(playerData, playerData.anchorMax);
+            pivot.SetInitialValue(playerData, playerData.sizeDelta);
             rotation.SetInitialValue(playerData, playerData.localEulerAngles);
             scale.SetInitialValue(playerData, playerData.localScale);
         }

@@ -19,7 +19,7 @@ namespace UnityTweenPlayables.Editor.Core {
             rect.height = EditorGUIUtility.singleLineHeight + spacing * 2;
             EditorGUI.LabelField(rect, label);
             rect.y += rect.height;
-            rect.xMin += 15.0f;
+            EditorGUI.indentLevel++;
 
             var modeProp = property.FindPropertyRelative("mode");
             rect.height = EditorGUI.GetPropertyHeight(modeProp) + spacing * 2;
@@ -53,6 +53,8 @@ namespace UnityTweenPlayables.Editor.Core {
                     break;
                 }
             }
+            
+            EditorGUI.indentLevel--;
         }
 
         /// <summary>
