@@ -23,8 +23,6 @@ namespace UnityTweenPlayables.Core {
         [Tooltip("テンプレートカーブ情報")]
         public TemplateCurve[] templateCurves;
 
-        public EaseParameter Parameter;
-
         private Dictionary<string, TemplateCurve> _templateCurveDict;
 
         /// <summary>
