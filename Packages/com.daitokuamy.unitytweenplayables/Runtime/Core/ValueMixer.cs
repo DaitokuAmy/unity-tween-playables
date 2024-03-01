@@ -18,7 +18,7 @@ namespace UnityTweenPlayables.Core {
         /// <summary>
         /// 値のクリア
         /// </summary>
-        public void Clear() {
+        public virtual void Clear() {
             Value = default;
             ValueCount = 0;
         }
@@ -28,7 +28,7 @@ namespace UnityTweenPlayables.Core {
         /// </summary>
         /// <param name="val">ブレンドする基礎値</param>
         /// <param name="weight">重み</param>
-        public void Blend(T val, float weight) {
+        public virtual void Blend(T val, float weight) {
             Value = Add(Value, val, weight);
             ValueCount++;
         }
@@ -84,6 +84,39 @@ namespace UnityTweenPlayables.Core {
         /// <inheritdoc/>
         protected override Vector4 Add(Vector4 baseValue, Vector4 addValue, float weight) {
             return baseValue + addValue * weight;
+        }
+    }
+
+    /// <summary>
+    /// Vector4用補間パラメータ
+    /// </summary>
+    [Serializable]
+    public class RectOffsetValueMixer : ValueMixer<RectOffset> {
+        private Vector4 _floatValue;
+
+        /// <summary>
+        /// 値のクリア
+        /// </summary>
+        public override void Clear() {
+            _floatValue = default;
+            base.Clear();
+        }
+
+        /// <summary>
+        /// 値のブレンド
+        /// </summary>
+        /// <param name="val">ブレンドする基礎値</param>
+        /// <param name="weight">重み</param>
+        public override void Blend(RectOffset val, float weight) {
+            var floatVal = new Vector4(val.left, val.right, val.top, val.bottom);
+            _floatValue += floatVal * weight;
+        }
+        
+        /// <inheritdoc/>
+        protected override RectOffset Add(RectOffset baseValue, RectOffset addValue, float weight) {
+            var floatVal = new Vector4(addValue.left, addValue.right, addValue.top, addValue.bottom);
+            _floatValue += floatVal * weight;
+            return new RectOffset((int)floatVal.x, (int)floatVal.y, (int)floatVal.z, (int)floatVal.w);
         }
     }
 

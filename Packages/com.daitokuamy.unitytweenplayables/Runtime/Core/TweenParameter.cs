@@ -192,6 +192,76 @@ namespace UnityTweenPlayables.Core {
     }
 
     /// <summary>
+    /// Rect用補間パラメータ
+    /// </summary>
+    [Serializable]
+    public class RectTweenParameter : TweenParameter<Rect> {
+        /// <summary>
+        /// 軸マスク
+        /// </summary>
+        [Flags]
+        public enum MaskFlags {
+            X = 1 << 0,
+            Y = 1 << 1,
+            Width = 1 << 2,
+            Height = 1 << 3,
+        }
+
+        [Tooltip("無効化する軸マスク")]
+        public MaskFlags ignoreMasks;
+        
+        /// <inheritdoc/>
+        public override Rect GetRelativeValue(object key, Rect value) {
+            return value;
+        }
+
+        /// <inheritdoc/>
+        public override Rect Evaluate(object key, float t) {
+            t = ease.Evaluate(t);
+            var x = Mathf.LerpUnclamped(start.x, end.x, t);
+            var y = Mathf.LerpUnclamped(start.y, end.y, t);
+            var width = Mathf.LerpUnclamped(start.width, end.width, t);
+            var height = Mathf.LerpUnclamped(start.height, end.height, t);
+            return new Rect(x, y, width, height);
+        }
+    }
+
+    /// <summary>
+    /// RectOffset用補間パラメータ
+    /// </summary>
+    [Serializable]
+    public class RectOffsetTweenParameter : TweenParameter<RectOffset> {
+        /// <summary>
+        /// 軸マスク
+        /// </summary>
+        [Flags]
+        public enum MaskFlags {
+            X = 1 << 0,
+            Y = 1 << 1,
+            Width = 1 << 2,
+            Height = 1 << 3,
+        }
+
+        [Tooltip("無効化する軸マスク")]
+        public MaskFlags ignoreMasks;
+        
+        /// <inheritdoc/>
+        public override RectOffset GetRelativeValue(object key, RectOffset value) {
+            return value;
+        }
+
+        /// <inheritdoc/>
+        public override RectOffset Evaluate(object key, float t) {
+            t = ease.Evaluate(t);
+            var left = Mathf.LerpUnclamped(start.left, end.left, t);
+            var right = Mathf.LerpUnclamped(start.right, end.right, t);
+            var top = Mathf.LerpUnclamped(start.top, end.top, t);
+            var bottom = Mathf.LerpUnclamped(start.bottom, end.bottom, t);
+            return new RectOffset((int)left, (int)right, (int)top, (int)bottom);
+        }
+    }
+
+    /// <summary>
     /// Color用補間パラメータ
     /// </summary>
     [Serializable]

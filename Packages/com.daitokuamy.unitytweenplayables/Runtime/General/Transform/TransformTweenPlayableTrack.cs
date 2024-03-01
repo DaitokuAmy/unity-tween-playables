@@ -10,6 +10,6 @@ namespace UnityTweenPlayables.UI {
     [TrackBindingType(typeof(Transform))]
     [TrackClipType(typeof(TransformTweenPlayableClip))]
     [TrackColor(0.3f, 0.8f, 0.3f)]
-    [DisplayName("Unity Tween Playables/UI/Transform Track")]
+    [DisplayName("Unity Tween Playables/General/Transform Track")]
     public class TransformTweenPlayableTrack : TweenPlayableTrack<Transform, TransformTweenMixerPlayableBehaviour, TransformTweenPlayableBehaviour> {}
 }

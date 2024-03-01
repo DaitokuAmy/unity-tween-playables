@@ -63,6 +63,33 @@ namespace UnityTweenPlayables.Core {
         }
 
         /// <summary>
+        /// Vector4の値をマスクする
+        /// </summary>
+        /// <param name="source">基礎値</param>
+        /// <param name="baseValue">置き換え値</param>
+        /// <param name="mask">マスク(1が基礎値を使用)</param>
+        /// <returns>マスク後の値</returns>
+        public static RectOffset Mask(this RectOffset source, RectOffset baseValue, int mask) {
+            if ((mask & (1 << 0)) == 0) {
+                source.left = baseValue.left;
+            }
+
+            if ((mask & (1 << 0)) == 0) {
+                source.right = baseValue.right;
+            }
+
+            if ((mask & (1 << 0)) == 0) {
+                source.top = baseValue.top;
+            }
+
+            if ((mask & (1 << 0)) == 0) {
+                source.bottom = baseValue.bottom;
+            }
+
+            return source;
+        }
+
+        /// <summary>
         /// Colorの値をマスクする
         /// </summary>
         /// <param name="source">基礎値</param>
