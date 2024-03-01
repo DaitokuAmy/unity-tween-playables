@@ -24,7 +24,7 @@ namespace UnityTweenPlayables.UI {
         /// ブレンド処理
         /// </summary>
         protected override void Blend(CanvasGroup component, CanvasGroupTweenPlayableBehaviour behaviour, float weight, float progress) {
-            BlendValueMixer(_alphaMixer, behaviour.alpha, behaviour, weight, progress);
+            BlendValueMixer(_alphaMixer, behaviour.alpha, component, weight, progress);
         }
     }
 }

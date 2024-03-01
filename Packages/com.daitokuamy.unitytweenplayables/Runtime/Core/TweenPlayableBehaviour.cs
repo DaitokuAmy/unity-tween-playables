@@ -20,13 +20,14 @@ namespace UnityTweenPlayables.Core {
     public abstract class TweenPlayableBehaviour<TBinding> : PlayableBehaviour, ITweenPlayableBehaviour
         where TBinding : Component {
         private bool _initialized;
+        private TBinding _playerData;
         private ITweenPlayableClip _ownerClip;
 
         /// <summary>
         /// グラフ停止時の処理
         /// </summary>
         public override void OnGraphStop(Playable playable) {
-            _initialized = false;
+            Cleanup();
             base.OnGraphStop(playable);
         }
 
@@ -53,7 +54,7 @@ namespace UnityTweenPlayables.Core {
         /// <summary>
         /// Behaviourのクリーンアップ
         /// </summary>
-        protected virtual void CleanupInternal() {}
+        protected virtual void CleanupInternal(TBinding playerData) {}
 
         /// <summary>
         /// 初期化処理
@@ -66,6 +67,8 @@ namespace UnityTweenPlayables.Core {
         /// セットアップ
         /// </summary>
         public void Setup(TBinding playerData) {
+            _playerData = playerData;
+            
             if (playerData == null) {
                 return;
             }
@@ -87,7 +90,8 @@ namespace UnityTweenPlayables.Core {
             }
 
             _initialized = false;
-            CleanupInternal();
+            CleanupInternal(_playerData);
+            _playerData = null;
         }
 
         /// <summary>

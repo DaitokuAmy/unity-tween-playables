@@ -207,8 +207,18 @@ namespace UnityTweenPlayables.Core {
             A = 1 << 3,
         }
 
+        /// <summary>
+        /// ブレンドタイプ
+        /// </summary>
+        public enum BlendType {
+            Multiply,
+            Additional,
+        }
+
         [Tooltip("無効化する軸マスク")]
         public MaskFlags ignoreMasks;
+        [Tooltip("相対指定の際のブレンドタイプ")]
+        public BlendType blendTypeForRelative = BlendType.Multiply;
         
         /// <summary>
         /// コンストラクタ
@@ -220,7 +230,13 @@ namespace UnityTweenPlayables.Core {
 
         /// <inheritdoc/>
         public override Color GetRelativeValue(object key, Color value) {
-            return GetInitialValue(key) * value;
+            switch (blendTypeForRelative) {
+                case BlendType.Additional:
+                    return GetInitialValue(key) + value;
+                case BlendType.Multiply:
+                default:
+                    return GetInitialValue(key) * value;
+            }
         }
 
         /// <inheritdoc/>
