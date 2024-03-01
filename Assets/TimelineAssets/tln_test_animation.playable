@@ -92,6 +92,110 @@ MonoBehaviour:
     m_DisplayName: Graphic
   m_Markers:
     m_Objects: []
+--- !u!114 &-6365502115044671626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d9a61a548e64c7ba66b81f553a0a9d, type: 3}
+  m_Name: VerticalLayoutGroupTweenPlayableClip
+  m_EditorClassIdentifier: 
+  _behaviour:
+    padding:
+      active: 0
+      start:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      end:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      ease:
+        mode: 0
+        easeType: 0
+        templateCurveKey: 
+        customCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      relative: 0
+      ignoreMasks: 0
+    spacing:
+      active: 1
+      start: 0
+      end: 100
+      ease:
+        mode: 0
+        easeType: 0
+        templateCurveKey: 
+        customCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      relative: 0
+--- !u!114 &-5780639903045861351
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d9a61a548e64c7ba66b81f553a0a9d, type: 3}
+  m_Name: VerticalLayoutGroupTweenPlayableClip(Clone)
+  m_EditorClassIdentifier: 
+  _behaviour:
+    padding:
+      active: 1
+      start:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      end:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      ease:
+        mode: 0
+        easeType: 0
+        templateCurveKey: 
+        customCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      relative: 0
+      ignoreMasks: 0
+    spacing:
+      active: 1
+      start: 100
+      end: 0
+      ease:
+        mode: 0
+        easeType: 0
+        templateCurveKey: 
+        customCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      relative: 0
 --- !u!114 &-4827959139565308214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,7 +331,7 @@ MonoBehaviour:
   _behaviour:
     color:
       active: 1
-      start: {r: 0, g: 0, b: 0, a: 1}
+      start: {r: 1, g: 1, b: 1, a: 1}
       end: {r: 0, g: 0.015195131, b: 1, a: 1}
       ease:
         mode: 0
@@ -239,9 +343,9 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-      relative: 1
-      ignoreMasks: 0
-      blendTypeForRelative: 1
+      relative: 0
+      ignoreMasks: 14
+      blendTypeForRelative: 0
 --- !u!114 &-926200220362382207
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -355,6 +459,7 @@ MonoBehaviour:
   - {fileID: 3768825259212117035}
   - {fileID: 3747984449770412330}
   - {fileID: 3401918103286832012}
+  - {fileID: 4311496516921506857}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -875,7 +980,7 @@ MonoBehaviour:
     m_DisplayName: TextMeshProUGUI
   m_Markers:
     m_Objects: []
---- !u!114 &6536267827259022479
+--- !u!114 &4311496516921506857
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -884,8 +989,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98ecb5f8f07c18c43991f75a334f414e, type: 3}
-  m_Name: Canvas Group Tween Playable Track
+  m_Script: {fileID: 11500000, guid: 27378b1d4caa54931bddca83a619ef47, type: 3}
+  m_Name: Vertical Layout Group Tween Playable Track
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -897,15 +1002,15 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 1.9666666666666666
+    m_Start: 0.09999999999999992
     m_ClipIn: 0
-    m_Asset: {fileID: 8433549270817719040}
-    m_Duration: 2.05
+    m_Asset: {fileID: -6365502115044671626}
+    m_Duration: 3.4999999999999996
     m_TimeScale: 1
-    m_ParentTrack: {fileID: 6536267827259022479}
+    m_ParentTrack: {fileID: 4311496516921506857}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0.5000000000000016
+    m_BlendInDuration: -1
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -928,6 +1033,113 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 1
+    m_PreExtrapolationMode: 1
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0.09999999999999992
+    m_DisplayName: VerticalLayoutGroup
+  - m_Version: 1
+    m_Start: 3.5999999999999996
+    m_ClipIn: 0
+    m_Asset: {fileID: -5780639903045861351}
+    m_Duration: 3.4999999999999996
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 4311496516921506857}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 1
+    m_PreExtrapolationMode: 1
+    m_PostExtrapolationTime: Infinity
+    m_PreExtrapolationTime: 0
+    m_DisplayName: VerticalLayoutGroup
+  m_Markers:
+    m_Objects: []
+--- !u!114 &6536267827259022479
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ecb5f8f07c18c43991f75a334f414e, type: 3}
+  m_Name: Canvas Group Tween Playable Track
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 1
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 1.9666666666666666
+    m_ClipIn: 0
+    m_Asset: {fileID: 8433549270817719040}
+    m_Duration: 2.05
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 6536267827259022479}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0.5000000000000016
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1053,25 +1265,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4

@@ -11,6 +11,6 @@ namespace UnityTweenPlayables.UI {
     [TrackBindingType(typeof(HorizontalLayoutGroup))]
     [TrackClipType(typeof(HorizontalLayoutGroupTweenPlayableClip))]
     [TrackColor(0.3f, 0.8f, 0.3f)]
-    [DisplayName("Unity Tween Playables/UI/HorizontalLayoutGroup Track")]
+    [DisplayName("Unity Tween Playables/UI/LayoutGroup/HorizontalLayoutGroup Track")]
     public class HorizontalLayoutGroupTweenPlayableTrack : TweenPlayableTrack<HorizontalLayoutGroup, HorizontalLayoutGroupTweenMixerPlayableBehaviour, HorizontalLayoutGroupTweenPlayableBehaviour> {}
 }
