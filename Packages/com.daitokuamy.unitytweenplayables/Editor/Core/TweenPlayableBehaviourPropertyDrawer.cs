@@ -18,7 +18,6 @@ namespace UnityTweenPlayables.Editor.Core {
             
             // 子階層プロパティのみ描画
             var depth = -1;
-            EditorGUI.indentLevel++;
             
             while (currentProp.NextVisible(true) || depth == -1) {
                 // Depthが元よりも低いなら終わり
@@ -36,8 +35,6 @@ namespace UnityTweenPlayables.Editor.Core {
                 EditorGUI.PropertyField(rect, currentProp, true);
                 rect.y += rect.height + spacing;
             }
-
-            EditorGUI.indentLevel--;
         }
 
         /// <summary>

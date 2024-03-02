@@ -15,8 +15,7 @@ namespace UnityTweenPlayables.Editor.Core {
             // Active状態の時にタイトル名にアイコンを付ける
             var active = property.FindPropertyRelative("active").boolValue;
             var iconContent = EditorGUIUtility.IconContent(active ? "P4_CheckOutRemote" : "Valid");
-            iconContent.text = label.text;
-            iconContent.tooltip = label.tooltip;
+            var iconSize = 30.0f;
             
             var rect = position;
             var spacing = EditorGUIUtility.standardVerticalSpacing;
@@ -24,7 +23,10 @@ namespace UnityTweenPlayables.Editor.Core {
             // タイトルプロパティの描画
             var currentProp = property;
             rect.height = EditorGUI.GetPropertyHeight(currentProp, false);
-            EditorGUI.PropertyField(rect, currentProp, iconContent, false);
+            EditorGUI.LabelField(rect, iconContent);
+            rect.xMin += iconSize;
+            currentProp.isExpanded = EditorGUI.Foldout(rect, currentProp.isExpanded, label, true, EditorStyles.label);
+            rect.xMin -= iconSize;
             rect.y += rect.height + spacing;
             
             // 子階層プロパティの描画

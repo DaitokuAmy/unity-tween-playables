@@ -76,24 +76,12 @@ namespace UnityTweenPlayables.Core {
                 var progress = (float)(input.GetTime() / behaviour.GetClipDuration());
 
                 if (inputWeight == 0.0f) {
-                    if (input.GetPlayState() == PlayState.Paused && progress > 0.0f) {
-                        lastBehaviour = behaviour;
-                    }
-
                     continue;
                 }
 
                 lastActiveBehaviour = behaviour;
                 Blend(_targetComponent, behaviour, inputWeight, progress);
                 activeInputCount++;
-            }
-
-            // WeightがあるInputがない場合は、最後のBehaviourの値を適用
-            if (activeInputCount == 0) {
-                if (lastBehaviour != null) {
-                    lastActiveBehaviour = lastBehaviour;
-                    Blend(_targetComponent, lastBehaviour, 1, 1);
-                }
             }
 
             // 値の反映
