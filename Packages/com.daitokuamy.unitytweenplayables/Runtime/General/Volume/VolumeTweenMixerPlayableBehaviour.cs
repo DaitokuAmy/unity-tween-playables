@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityTweenPlayables.Core;
 
-namespace UnityTweenPlayables.UI {
+namespace UnityTweenPlayables.General {
     /// <summary>
     /// VolumeをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>

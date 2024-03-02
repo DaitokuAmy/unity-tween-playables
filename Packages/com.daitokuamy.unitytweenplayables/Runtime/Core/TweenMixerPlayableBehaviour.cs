@@ -5,14 +5,27 @@ using UnityEngine.Timeline;
 
 namespace UnityTweenPlayables.Core {
     /// <summary>
+    /// PlayableBehaviourの共通インターフェース
+    /// </summary>
+    public interface ITweenMixerPlayableBehaviour {
+        /// <summary>
+        /// 初期化処理
+        /// </summary>
+        void Initialize(TrackAsset trackAsset);
+    }
+    
+    /// <summary>
     /// TweenPlayable用のMixerPlayableBehaviour基底
     /// </summary>
-    public abstract class TweenMixerPlayableBehaviour<TBinding, TTrack, TBehaviour> : PlayableBehaviour
+    public abstract class TweenMixerPlayableBehaviour<TBinding, TTrack, TBehaviour> : PlayableBehaviour, ITweenMixerPlayableBehaviour
         where TBinding : Component
         where TTrack : TrackAsset
         where TBehaviour : TweenPlayableBehaviour<TBinding, TTrack>, new() {
         private TBinding _targetComponent;
         private List<ScriptPlayable<TBehaviour>> _playables = new();
+        
+        /// <summary>Trackへの参照</summary>
+        public TTrack Track { get; private set; }
 
         /// <summary>
         /// Playable廃棄時処理
@@ -104,6 +117,13 @@ namespace UnityTweenPlayables.Core {
         /// <param name="component">変更対象のComponent</param>
         /// <param name="lastBehaviour">最後に評価された振る舞いクラス</param>
         protected abstract void Apply(TBinding component, TBehaviour lastBehaviour);
+
+        /// <summary>
+        /// 初期化処理
+        /// </summary>
+        void ITweenMixerPlayableBehaviour.Initialize(TrackAsset track) {
+            Track = track as TTrack;
+        }
 
         /// <summary>
         /// ValueMixerへのブレンド反映

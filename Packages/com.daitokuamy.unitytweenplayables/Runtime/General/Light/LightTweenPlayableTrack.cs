@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Timeline;
 using UnityTweenPlayables.Core;
 
-namespace UnityTweenPlayables.UI {
+namespace UnityTweenPlayables.General {
     /// <summary>
     /// LightをTweenで動かすためのPlayableTrack
     /// </summary>

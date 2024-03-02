@@ -3,7 +3,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Timeline;
 using UnityTweenPlayables.Core;
 
-namespace UnityTweenPlayables.UI {
+namespace UnityTweenPlayables.General {
     /// <summary>
     /// VolumeをTweenで動かすためのPlayableTrack
     /// </summary>

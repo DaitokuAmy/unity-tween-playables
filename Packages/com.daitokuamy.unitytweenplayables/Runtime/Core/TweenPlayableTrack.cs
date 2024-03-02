@@ -5,13 +5,16 @@ using UnityEngine.Timeline;
 using UnityEditor;
 #endif
 
-namespace UnityTweenPlayables.Core {
+namespace UnityTweenPlayables.Core {    
     /// <summary>
     /// TweenPlayable用のTrackAsset基底
     /// </summary>
     public abstract class TweenPlayableTrack<TBinding, TMixerBehaviour> : TrackAsset
         where TBinding : Component
-        where TMixerBehaviour : PlayableBehaviour, new() {
+        where TMixerBehaviour : PlayableBehaviour, ITweenMixerPlayableBehaviour, new() {
+        /// <summary>Clipの表示名(nullならデフォルト)</summary>
+        public virtual string ClipDisplayName => null;
+        
         /// <summary>
         /// Mixerの生成
         /// </summary>
@@ -24,11 +27,19 @@ namespace UnityTweenPlayables.Core {
                     if (!string.IsNullOrEmpty(clip.DisplayName)) {
                         timelineClip.displayName = clip.DisplayName;
                     }
+                    else if (!string.IsNullOrEmpty(ClipDisplayName)) {
+                        timelineClip.displayName = ClipDisplayName;
+                    }
+                    else {
+                        timelineClip.displayName = clip.GetType().Name.Replace("TweenPlayableClip", "");
+                    }
 #endif
                 }
             }
 
-            return ScriptPlayable<TMixerBehaviour>.Create(graph, inputCount);
+            var mixer = ScriptPlayable<TMixerBehaviour>.Create(graph, inputCount);
+            mixer.GetBehaviour().Initialize(this);
+            return mixer;
         }
 
         /// <summary>

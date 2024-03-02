@@ -92,6 +92,36 @@ MonoBehaviour:
     m_DisplayName: Graphic
   m_Markers:
     m_Objects: []
+--- !u!114 &-7095618477906446133
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b341a122385bda247b43238cd8947781, type: 3}
+  m_Name: RendererTweenPlayableClip
+  m_EditorClassIdentifier: 
+  _behaviour:
+    value:
+      active: 1
+      start: {r: 1, g: 1, b: 1, a: 1}
+      end: {r: 1, g: 0, b: 0, a: 1}
+      ease:
+        mode: 0
+        easeType: 0
+        templateCurveKey: 
+        customCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      relative: 0
+      ignoreMasks: 0
+      blendTypeForRelative: 0
 --- !u!114 &-6803482166917221373
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,11 +209,11 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 0
     m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 1.8500000000000005
+    m_PostExtrapolationTime: 1.166666666666667
     m_PreExtrapolationTime: 1.0833333333333333
     m_DisplayName: CanvasGroup
   - m_Version: 1
-    m_Start: 5.45
+    m_Start: 4.766666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 688190093593789600}
     m_Duration: 5
@@ -249,10 +279,11 @@ MonoBehaviour:
     m_PostExtrapolationMode: 0
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 1.8500000000000005
+    m_PreExtrapolationTime: 1.166666666666667
     m_DisplayName: CanvasGroup
   m_Markers:
     m_Objects: []
+  test: 0
 --- !u!114 &-6365502115044671626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -507,6 +538,65 @@ MonoBehaviour:
       relative: 0
       ignoreMasks: 0
       blendTypeForRelative: 0
+--- !u!114 &-2171938202118418173
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34776695ebdd6ab41851316a0e350d4d, type: 3}
+  m_Name: RendererVectorTweenPlayableClip
+  m_EditorClassIdentifier: 
+  _behaviour:
+    value:
+      active: 0
+      start: {x: 0, y: 0, z: 0, w: 0}
+      end: {x: 0, y: 0, z: 0, w: 0}
+      ease:
+        mode: 0
+        easeType: 0
+        templateCurveKey: 
+        customCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      relative: 0
+      ignoreMasks: 0
+--- !u!114 &-1624796925834404315
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297e269e46646fa4fb831041793d9808, type: 3}
+  m_Name: RendererColorTweenPlayableClip
+  m_EditorClassIdentifier: 
+  _behaviour:
+    value:
+      active: 1
+      start: {r: 1, g: 1, b: 1, a: 1}
+      end: {r: 1, g: 0, b: 0, a: 1}
+      ease:
+        mode: 0
+        easeType: 0
+        templateCurveKey: 
+        customCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      relative: 0
+      ignoreMasks: 0
+      blendTypeForRelative: 0
 --- !u!114 &-926200220362382207
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -622,6 +712,8 @@ MonoBehaviour:
   - {fileID: 3401918103286832012}
   - {fileID: 4311496516921506857}
   - {fileID: -6803482166917221373}
+  - {fileID: 8795439530527917210}
+  - {fileID: 6240370312420314462}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -899,7 +991,7 @@ MonoBehaviour:
   m_Version: 3
   m_AnimClip: {fileID: 0}
   m_Locked: 0
-  m_Muted: 0
+  m_Muted: 1
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
   m_Parent: {fileID: 11400000}
@@ -1341,6 +1433,100 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
       relative: 0
+--- !u!114 &6240370312420314462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323c0abbf7860ba43891a49e12017a9c, type: 3}
+  m_Name: Renderer Vector Tween Playable Track
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 0.9499999999999997
+    m_ClipIn: 0
+    m_Asset: {fileID: -2171938202118418173}
+    m_Duration: 5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 6240370312420314462}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: Infinity
+    m_PreExtrapolationTime: 0.9499999999999997
+    m_DisplayName: '[Vector]_Test'
+  m_Markers:
+    m_Objects: []
+  materialIndex: 0
+  propertyName: _Test
 --- !u!114 &6536267827259022479
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1517,6 +1703,7 @@ MonoBehaviour:
     m_DisplayName: CanvasGroup
   m_Markers:
     m_Objects: []
+  test: 0
 --- !u!114 &6564705097111891070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1716,3 +1903,97 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
       relative: 0
+--- !u!114 &8795439530527917210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b1689aca8e37b4f80f381cbf155dfd, type: 3}
+  m_Name: Renderer Color Tween Playable Track
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 1.9999999999999987
+    m_ClipIn: 0
+    m_Asset: {fileID: -1624796925834404315}
+    m_Duration: 5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 8795439530527917210}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 1
+    m_PreExtrapolationMode: 1
+    m_PostExtrapolationTime: Infinity
+    m_PreExtrapolationTime: 1.9999999999999987
+    m_DisplayName: '[Color]_BaseColor'
+  m_Markers:
+    m_Objects: []
+  materialIndex: 0
+  propertyName: _BaseColor

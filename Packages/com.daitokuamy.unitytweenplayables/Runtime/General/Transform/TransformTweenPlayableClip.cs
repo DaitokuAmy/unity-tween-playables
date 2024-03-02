@@ -1,6 +1,6 @@
 using UnityTweenPlayables.Core;
 
-namespace UnityTweenPlayables.UI {
+namespace UnityTweenPlayables.General {
     /// <summary>
     /// TransformをTweenで動かすためのPlayableClip
     /// </summary>

@@ -40,7 +40,9 @@ namespace UnityTweenPlayables.Core {
         /// <summary>TimelineClipのサポート機能属性</summary>
         public virtual ClipCaps clipCaps => ClipCaps.Blending | ClipCaps.Extrapolation;
         /// <summary>表示名</summary>
-        public virtual string DisplayName => GetType().Name.Replace("TweenPlayableClip", "");
+        public virtual string DisplayName => null;
+        /// <summary>振る舞い用コンポーネント</summary>
+        public TBehaviour Behaviour => _behaviour;
 
         /// <summary>
         /// Playableの生成

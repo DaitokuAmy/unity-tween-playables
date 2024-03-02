@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityTweenPlayables.Core;
 
-namespace UnityTweenPlayables.UI {
+namespace UnityTweenPlayables.General {
     /// <summary>
     /// LightをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
