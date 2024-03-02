@@ -32,7 +32,7 @@ namespace UnityTweenPlayables.Core {
         private double _duration;
 
         /// <summary>TimelineClipのサポート機能属性</summary>
-        ClipCaps ITimelineClipAsset.clipCaps => ClipCaps.Blending | ClipCaps.Extrapolation;
+        public virtual ClipCaps clipCaps => ClipCaps.Blending | ClipCaps.Extrapolation;
 
         /// <summary>表示名</summary>
         public virtual string DisplayName => GetType().Name.Replace("TweenPlayableClip", "");
