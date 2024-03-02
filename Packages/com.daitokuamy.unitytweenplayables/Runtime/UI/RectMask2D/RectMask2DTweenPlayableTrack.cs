@@ -10,7 +10,7 @@ namespace UnityTweenPlayables.UI {
     /// </summary>
     [TrackBindingType(typeof(RectMask2D))]
     [TrackClipType(typeof(RectMask2DTweenPlayableClip))]
-    [TrackColor(0.3f, 0.8f, 0.3f)]
+    [TrackColor(Constant.TrackColorUIRed, Constant.TrackColorUIGreen, Constant.TrackColorUIBlue)]
     [DisplayName("Unity Tween Playables/UI/RectMask2D Track")]
     public class RectMask2DTweenPlayableTrack : TweenPlayableTrack<RectMask2D, RectMask2DTweenMixerPlayableBehaviour, RectMask2DTweenPlayableBehaviour> {}
 }

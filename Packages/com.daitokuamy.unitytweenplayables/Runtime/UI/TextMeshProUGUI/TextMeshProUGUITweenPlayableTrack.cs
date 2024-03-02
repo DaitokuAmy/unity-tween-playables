@@ -9,7 +9,7 @@ namespace UnityTweenPlayables.UI {
     /// </summary>
     [TrackBindingType(typeof(TextMeshProUGUI))]
     [TrackClipType(typeof(TextMeshProUGUITweenPlayableClip))]
-    [TrackColor(0.3f, 0.8f, 0.3f)]
+    [TrackColor(Constant.TrackColorTextRed, Constant.TrackColorTextGreen, Constant.TrackColorTextBlue)]
     [DisplayName("Unity Tween Playables/UI/TextMeshProUGUI Track")]
     public class TextMeshProUGUITweenPlayableTrack : TweenPlayableTrack<TextMeshProUGUI, TextMeshProUGUITweenMixerPlayableBehaviour, TextMeshProUGUITweenPlayableBehaviour> {}
 }

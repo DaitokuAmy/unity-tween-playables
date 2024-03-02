@@ -10,7 +10,7 @@ namespace UnityTweenPlayables.UI {
     /// </summary>
     [TrackBindingType(typeof(VerticalLayoutGroup))]
     [TrackClipType(typeof(VerticalLayoutGroupTweenPlayableClip))]
-    [TrackColor(0.3f, 0.8f, 0.3f)]
+    [TrackColor(Constant.TrackColorUIRed, Constant.TrackColorUIGreen, Constant.TrackColorUIBlue)]
     [DisplayName("Unity Tween Playables/UI/LayoutGroup/VerticalLayoutGroup Track")]
     public class VerticalLayoutGroupTweenPlayableTrack : TweenPlayableTrack<VerticalLayoutGroup, VerticalLayoutGroupTweenMixerPlayableBehaviour, VerticalLayoutGroupTweenPlayableBehaviour> {}
 }

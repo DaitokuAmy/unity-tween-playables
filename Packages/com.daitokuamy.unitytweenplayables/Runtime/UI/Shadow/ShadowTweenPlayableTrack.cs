@@ -1,5 +1,4 @@
 using System.ComponentModel;
-using UnityEngine;
 using UnityEngine.Timeline;
 using UnityEngine.UI;
 using UnityTweenPlayables.Core;
@@ -10,7 +9,7 @@ namespace UnityTweenPlayables.UI {
     /// </summary>
     [TrackBindingType(typeof(Shadow))]
     [TrackClipType(typeof(ShadowTweenPlayableClip))]
-    [TrackColor(0.3f, 0.8f, 0.3f)]
+    [TrackColor(Constant.TrackColorUIRed, Constant.TrackColorUIGreen, Constant.TrackColorUIBlue)]
     [DisplayName("Unity Tween Playables/UI/Shadow Track")]
     public class ShadowTweenPlayableTrack : TweenPlayableTrack<Shadow, ShadowTweenMixerPlayableBehaviour, ShadowTweenPlayableBehaviour> {}
 }

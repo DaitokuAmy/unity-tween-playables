@@ -9,7 +9,7 @@ namespace UnityTweenPlayables.UI {
     /// </summary>
     [TrackBindingType(typeof(CanvasGroup))]
     [TrackClipType(typeof(CanvasGroupTweenPlayableClip))]
-    [TrackColor(0.3f, 0.8f, 0.3f)]
+    [TrackColor(Constant.TrackColorUIRed, Constant.TrackColorUIGreen, Constant.TrackColorUIBlue)]
     [DisplayName("Unity Tween Playables/UI/CanvasGroup Track")]
     public class CanvasGroupTweenPlayableTrack : TweenPlayableTrack<CanvasGroup, CanvasGroupTweenMixerPlayableBehaviour, CanvasGroupTweenPlayableBehaviour> {}
 }

@@ -10,7 +10,7 @@ namespace UnityTweenPlayables.UI {
     /// </summary>
     [TrackBindingType(typeof(Outline))]
     [TrackClipType(typeof(OutlineTweenPlayableClip))]
-    [TrackColor(0.3f, 0.8f, 0.3f)]
+    [TrackColor(Constant.TrackColorUIRed, Constant.TrackColorUIGreen, Constant.TrackColorUIBlue)]
     [DisplayName("Unity Tween Playables/UI/Outline Track")]
     public class OutlineTweenPlayableTrack : TweenPlayableTrack<Outline, OutlineTweenMixerPlayableBehaviour, OutlineTweenPlayableBehaviour> {}
 }

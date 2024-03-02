@@ -10,7 +10,7 @@ namespace UnityTweenPlayables.UI {
     /// </summary>
     [TrackBindingType(typeof(Slider))]
     [TrackClipType(typeof(SliderTweenPlayableClip))]
-    [TrackColor(0.3f, 0.8f, 0.3f)]
+    [TrackColor(Constant.TrackColorUIRed, Constant.TrackColorUIGreen, Constant.TrackColorUIBlue)]
     [DisplayName("Unity Tween Playables/UI/Slider Track")]
     public class SliderTweenPlayableTrack : TweenPlayableTrack<Slider, SliderTweenMixerPlayableBehaviour, SliderTweenPlayableBehaviour> {}
 }
