@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// LightをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class LightTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Light, LightTweenPlayableBehaviour> {
+    public class LightTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Light, LightTweenPlayableTrack, LightTweenPlayableBehaviour> {
         private ColorValueMixer _colorMixer = new();
         private FloatValueMixer _intensityMixer = new();
         private FloatValueMixer _shadowStrengthMixer = new();

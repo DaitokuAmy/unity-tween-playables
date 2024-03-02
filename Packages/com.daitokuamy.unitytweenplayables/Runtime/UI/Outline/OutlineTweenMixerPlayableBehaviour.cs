@@ -8,7 +8,7 @@ namespace UnityTweenPlayables.UI {
     /// OutlineをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class OutlineTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Outline, OutlineTweenPlayableBehaviour> {
+    public class OutlineTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Outline, OutlineTweenPlayableTrack, OutlineTweenPlayableBehaviour> {
         private ColorValueMixer _colorMixer = new();
         private Vector2ValueMixer _distanceMixer = new();
 

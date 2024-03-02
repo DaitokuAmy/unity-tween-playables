@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// VolumeをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class VolumeTweenPlayableBehaviour : TweenPlayableBehaviour<Volume> {
+    public class VolumeTweenPlayableBehaviour : TweenPlayableBehaviour<Volume, VolumeTweenPlayableTrack> {
         public FloatTweenParameter weight;
 
         /// <summary>

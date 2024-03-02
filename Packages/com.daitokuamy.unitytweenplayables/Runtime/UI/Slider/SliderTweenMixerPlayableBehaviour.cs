@@ -8,7 +8,7 @@ namespace UnityTweenPlayables.UI {
     /// SliderをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class SliderTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Slider, SliderTweenPlayableBehaviour> {
+    public class SliderTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Slider, SliderTweenPlayableTrack, SliderTweenPlayableBehaviour> {
         private FloatValueMixer _valueMixer = new();
 
         /// <summary>

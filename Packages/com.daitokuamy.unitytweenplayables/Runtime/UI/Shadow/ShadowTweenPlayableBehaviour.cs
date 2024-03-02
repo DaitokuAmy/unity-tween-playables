@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// ShadowをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class ShadowTweenPlayableBehaviour : TweenPlayableBehaviour<Shadow> {
+    public class ShadowTweenPlayableBehaviour : TweenPlayableBehaviour<Shadow, ShadowTweenPlayableTrack> {
         public ColorTweenParameter color;
         public Vector2TweenParameter distance;
 

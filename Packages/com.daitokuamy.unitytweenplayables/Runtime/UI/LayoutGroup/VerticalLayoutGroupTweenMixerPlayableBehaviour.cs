@@ -8,7 +8,7 @@ namespace UnityTweenPlayables.UI {
     /// VerticalLayoutGroupをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class VerticalLayoutGroupTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<VerticalLayoutGroup, VerticalLayoutGroupTweenPlayableBehaviour> {
+    public class VerticalLayoutGroupTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<VerticalLayoutGroup, VerticalLayoutGroupTweenPlayableTrack, VerticalLayoutGroupTweenPlayableBehaviour> {
         private RectOffsetValueMixer _paddingMixer = new();
         private FloatValueMixer _spacingMixer = new();
 

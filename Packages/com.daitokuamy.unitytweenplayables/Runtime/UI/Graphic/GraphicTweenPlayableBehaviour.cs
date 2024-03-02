@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// GraphicをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class GraphicTweenPlayableBehaviour : TweenPlayableBehaviour<Graphic> {
+    public class GraphicTweenPlayableBehaviour : TweenPlayableBehaviour<Graphic, GraphicTweenPlayableTrack> {
         public ColorTweenParameter color;
 
         /// <summary>

@@ -8,7 +8,7 @@ namespace UnityTweenPlayables.UI {
     /// RectMask2DをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class RectMask2DTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<RectMask2D, RectMask2DTweenPlayableBehaviour> {
+    public class RectMask2DTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<RectMask2D, RectMask2DTweenPlayableTrack, RectMask2DTweenPlayableBehaviour> {
         private Vector4ValueMixer _paddingMixer = new();
         private Vector2ValueMixer _softnessMixer = new();
 

@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// RectTransformをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class RectTransformTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<RectTransform, RectTransformTweenPlayableBehaviour> {
+    public class RectTransformTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<RectTransform, RectTransformTweenPlayableTrack, RectTransformTweenPlayableBehaviour> {
         private Vector3ValueMixer _anchoredPositionMixer = new();
         private Vector2ValueMixer _sizeDeltaMixer = new();
         private Vector2ValueMixer _anchorMinMixer = new();

@@ -8,7 +8,7 @@ namespace UnityTweenPlayables.UI {
     /// VolumeをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class VolumeTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Volume, VolumeTweenPlayableBehaviour> {
+    public class VolumeTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Volume, VolumeTweenPlayableTrack, VolumeTweenPlayableBehaviour> {
         private FloatValueMixer _weightMixer = new();
 
         /// <summary>

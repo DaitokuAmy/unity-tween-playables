@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// TextMeshProUGUIをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class TextMeshProUGUITweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<TextMeshProUGUI, TextMeshProUGUITweenPlayableBehaviour> {
+    public class TextMeshProUGUITweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<TextMeshProUGUI, TextMeshProUGUITweenPlayableTrack, TextMeshProUGUITweenPlayableBehaviour> {
         private ColorValueMixer _colorMixer = new();
         private FloatValueMixer _fontSizeMixer = new();
         private FloatValueMixer _characterSpacingMixer = new();

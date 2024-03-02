@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// CanvasGroupをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class CanvasGroupTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<CanvasGroup, CanvasGroupTweenPlayableBehaviour> {
+    public class CanvasGroupTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<CanvasGroup, CanvasGroupTweenPlayableTrack, CanvasGroupTweenPlayableBehaviour> {
         private FloatValueMixer _alphaMixer = new();
 
         /// <summary>

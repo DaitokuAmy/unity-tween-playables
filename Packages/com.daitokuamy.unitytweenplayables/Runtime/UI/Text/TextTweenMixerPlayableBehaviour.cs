@@ -8,7 +8,7 @@ namespace UnityTweenPlayables.UI {
     /// TextをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class TextTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Text, TextTweenPlayableBehaviour> {
+    public class TextTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Text, TextTweenPlayableTrack, TextTweenPlayableBehaviour> {
         private ColorValueMixer _colorMixer = new();
         private FloatValueMixer _fontSizeMixer = new();
         private FloatValueMixer _lineSpacingMixer = new();

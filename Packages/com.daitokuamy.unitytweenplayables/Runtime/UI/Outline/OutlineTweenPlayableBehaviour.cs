@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// OutlineをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class OutlineTweenPlayableBehaviour : TweenPlayableBehaviour<Outline> {
+    public class OutlineTweenPlayableBehaviour : TweenPlayableBehaviour<Outline, OutlineTweenPlayableTrack> {
         public ColorTweenParameter color;
         public Vector2TweenParameter distance;
 

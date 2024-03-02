@@ -11,5 +11,5 @@ namespace UnityTweenPlayables.UI {
     [TrackClipType(typeof(LightTweenPlayableClip))]
     [TrackColor(Constant.TrackColorGeneralRed, Constant.TrackColorGeneralGreen, Constant.TrackColorGeneralBlue)]
     [DisplayName("Unity Tween Playables/General/Light Track")]
-    public class LightTweenPlayableTrack : TweenPlayableTrack<Light, LightTweenMixerPlayableBehaviour, LightTweenPlayableBehaviour> {}
+    public class LightTweenPlayableTrack : TweenPlayableTrack<Light, LightTweenMixerPlayableBehaviour> {}
 }

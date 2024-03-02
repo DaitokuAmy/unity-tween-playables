@@ -8,7 +8,7 @@ namespace UnityTweenPlayables.UI {
     /// ShadowをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class ShadowTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Shadow, ShadowTweenPlayableBehaviour> {
+    public class ShadowTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Shadow, ShadowTweenPlayableTrack, ShadowTweenPlayableBehaviour> {
         private ColorValueMixer _colorMixer = new();
         private Vector2ValueMixer _distanceMixer = new();
 

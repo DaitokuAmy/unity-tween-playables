@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// SliderをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class SliderTweenPlayableBehaviour : TweenPlayableBehaviour<Slider> {
+    public class SliderTweenPlayableBehaviour : TweenPlayableBehaviour<Slider, SliderTweenPlayableTrack> {
         public FloatTweenParameter value;
 
         /// <summary>

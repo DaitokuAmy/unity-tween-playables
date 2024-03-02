@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// TextをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class TextTweenPlayableBehaviour : TweenPlayableBehaviour<Text> {
+    public class TextTweenPlayableBehaviour : TweenPlayableBehaviour<Text, TextTweenPlayableTrack> {
         public ColorTweenParameter color;
         public FloatTweenParameter fontSize;
         public FloatTweenParameter lineSpacing;

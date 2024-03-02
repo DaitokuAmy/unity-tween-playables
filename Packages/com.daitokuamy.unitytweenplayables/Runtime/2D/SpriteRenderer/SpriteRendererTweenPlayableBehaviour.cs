@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// SpriteRendererをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class SpriteRendererTweenPlayableBehaviour : TweenPlayableBehaviour<SpriteRenderer> {
+    public class SpriteRendererTweenPlayableBehaviour : TweenPlayableBehaviour<SpriteRenderer, SpriteRendererTweenPlayableTrack> {
         public ColorTweenParameter color;
         public Vector2TweenParameter size;
 

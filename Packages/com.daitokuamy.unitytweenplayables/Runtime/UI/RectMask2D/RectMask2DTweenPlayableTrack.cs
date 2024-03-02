@@ -1,5 +1,4 @@
 using System.ComponentModel;
-using UnityEngine;
 using UnityEngine.Timeline;
 using UnityEngine.UI;
 using UnityTweenPlayables.Core;
@@ -12,5 +11,5 @@ namespace UnityTweenPlayables.UI {
     [TrackClipType(typeof(RectMask2DTweenPlayableClip))]
     [TrackColor(Constant.TrackColorUIRed, Constant.TrackColorUIGreen, Constant.TrackColorUIBlue)]
     [DisplayName("Unity Tween Playables/UI/RectMask2D Track")]
-    public class RectMask2DTweenPlayableTrack : TweenPlayableTrack<RectMask2D, RectMask2DTweenMixerPlayableBehaviour, RectMask2DTweenPlayableBehaviour> {}
+    public class RectMask2DTweenPlayableTrack : TweenPlayableTrack<RectMask2D, RectMask2DTweenMixerPlayableBehaviour> {}
 }

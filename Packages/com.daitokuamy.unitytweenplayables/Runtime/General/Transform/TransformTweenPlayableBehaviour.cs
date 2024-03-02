@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// TransformをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class TransformTweenPlayableBehaviour : TweenPlayableBehaviour<Transform> {
+    public class TransformTweenPlayableBehaviour : TweenPlayableBehaviour<Transform, TransformTweenPlayableTrack> {
         public Vector3TweenParameter position;
         public Vector3TweenParameter rotation;
         public Vector3TweenParameter scale;

@@ -8,7 +8,7 @@ namespace UnityTweenPlayables.UI {
     /// GraphicをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class GraphicTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Graphic, GraphicTweenPlayableBehaviour> {
+    public class GraphicTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Graphic, GraphicTweenPlayableTrack, GraphicTweenPlayableBehaviour> {
         private ColorValueMixer _colorMixer = new();
 
         /// <summary>

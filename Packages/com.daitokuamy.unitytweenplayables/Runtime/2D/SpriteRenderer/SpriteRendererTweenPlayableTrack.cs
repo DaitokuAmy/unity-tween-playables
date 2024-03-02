@@ -11,5 +11,5 @@ namespace UnityTweenPlayables.UI {
     [TrackClipType(typeof(SpriteRendererTweenPlayableClip))]
     [TrackColor(Constant.TrackColor2DRed, Constant.TrackColor2DGreen, Constant.TrackColor2DBlue)]
     [DisplayName("Unity Tween Playables/General/SpriteRenderer Track")]
-    public class SpriteRendererTweenPlayableTrack : TweenPlayableTrack<SpriteRenderer, SpriteRendererTweenMixerPlayableBehaviour, SpriteRendererTweenPlayableBehaviour> {}
+    public class SpriteRendererTweenPlayableTrack : TweenPlayableTrack<SpriteRenderer, SpriteRendererTweenMixerPlayableBehaviour> {}
 }

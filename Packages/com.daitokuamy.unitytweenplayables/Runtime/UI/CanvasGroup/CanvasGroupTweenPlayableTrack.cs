@@ -11,5 +11,5 @@ namespace UnityTweenPlayables.UI {
     [TrackClipType(typeof(CanvasGroupTweenPlayableClip))]
     [TrackColor(Constant.TrackColorUIRed, Constant.TrackColorUIGreen, Constant.TrackColorUIBlue)]
     [DisplayName("Unity Tween Playables/UI/CanvasGroup Track")]
-    public class CanvasGroupTweenPlayableTrack : TweenPlayableTrack<CanvasGroup, CanvasGroupTweenMixerPlayableBehaviour, CanvasGroupTweenPlayableBehaviour> {}
+    public class CanvasGroupTweenPlayableTrack : TweenPlayableTrack<CanvasGroup, CanvasGroupTweenMixerPlayableBehaviour> {}
 }

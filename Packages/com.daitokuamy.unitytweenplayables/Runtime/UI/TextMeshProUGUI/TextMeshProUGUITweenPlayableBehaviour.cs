@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// TextMeshProUGUIをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class TextMeshProUGUITweenPlayableBehaviour : TweenPlayableBehaviour<TextMeshProUGUI> {
+    public class TextMeshProUGUITweenPlayableBehaviour : TweenPlayableBehaviour<TextMeshProUGUI, TextMeshProUGUITweenPlayableTrack> {
         public ColorTweenParameter color;
         public FloatTweenParameter fontSize;
         public FloatTweenParameter characterSpacing;

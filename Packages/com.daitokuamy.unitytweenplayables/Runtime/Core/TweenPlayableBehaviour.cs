@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 namespace UnityTweenPlayables.Core {
     /// <summary>
@@ -10,18 +11,23 @@ namespace UnityTweenPlayables.Core {
         /// <summary>
         /// 初期化処理
         /// </summary>
-        void Initialize(ITweenPlayableClip ownerClip);
+        void Initialize(TrackAsset trackAsset, ITweenPlayableClip ownerClip);
     }
     
     /// <summary>
     /// TweenPlayable用のPlayableBehaviour基底
     /// </summary>
     [Serializable]
-    public abstract class TweenPlayableBehaviour<TBinding> : PlayableBehaviour, ITweenPlayableBehaviour
-        where TBinding : Component {
+    public abstract class TweenPlayableBehaviour<TBinding, TTrack> : PlayableBehaviour, ITweenPlayableBehaviour
+        where TBinding : Component
+        where TTrack : TrackAsset
+    {
         private bool _initialized;
         private TBinding _playerData;
         private ITweenPlayableClip _ownerClip;
+        
+        /// <summary>所属しているTrack</summary>
+        public TTrack Track { get; private set; }
 
         /// <summary>
         /// グラフ停止時の処理
@@ -59,7 +65,8 @@ namespace UnityTweenPlayables.Core {
         /// <summary>
         /// 初期化処理
         /// </summary>
-        void ITweenPlayableBehaviour.Initialize(ITweenPlayableClip ownerClip) {
+        void ITweenPlayableBehaviour.Initialize(TrackAsset track, ITweenPlayableClip ownerClip) {
+            Track = track as TTrack;
             _ownerClip = ownerClip;
         }
 

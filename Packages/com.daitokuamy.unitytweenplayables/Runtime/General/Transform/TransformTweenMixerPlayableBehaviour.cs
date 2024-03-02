@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// TransformをTweenで動かすためのMixerPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class TransformTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Transform, TransformTweenPlayableBehaviour> {
+    public class TransformTweenMixerPlayableBehaviour : TweenMixerPlayableBehaviour<Transform, TransformTweenPlayableTrack, TransformTweenPlayableBehaviour> {
         private Vector3ValueMixer _positionMixer = new();
         private Vector3ValueMixer _rotationMixer = new();
         private Vector3ValueMixer _scaleMixer = new();

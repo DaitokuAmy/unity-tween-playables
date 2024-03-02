@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// RectTransformをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class RectTransformTweenPlayableBehaviour : TweenPlayableBehaviour<RectTransform> {
+    public class RectTransformTweenPlayableBehaviour : TweenPlayableBehaviour<RectTransform, RectTransformTweenPlayableTrack> {
         public Vector3TweenParameter anchoredPosition;
         public Vector2TweenParameter sizeDelta;
         public Vector2TweenParameter anchorMin;

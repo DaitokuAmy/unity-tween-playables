@@ -11,5 +11,5 @@ namespace UnityTweenPlayables.UI {
     [TrackClipType(typeof(ShadowTweenPlayableClip))]
     [TrackColor(Constant.TrackColorUIRed, Constant.TrackColorUIGreen, Constant.TrackColorUIBlue)]
     [DisplayName("Unity Tween Playables/UI/Shadow Track")]
-    public class ShadowTweenPlayableTrack : TweenPlayableTrack<Shadow, ShadowTweenMixerPlayableBehaviour, ShadowTweenPlayableBehaviour> {}
+    public class ShadowTweenPlayableTrack : TweenPlayableTrack<Shadow, ShadowTweenMixerPlayableBehaviour> {}
 }

@@ -9,16 +9,16 @@ namespace UnityTweenPlayables.Core {
     /// <summary>
     /// TweenPlayable用のTrackAsset基底
     /// </summary>
-    public abstract class TweenPlayableTrack<TBinding, TMixerBehaviour, TBehaviour> : TrackAsset
+    public abstract class TweenPlayableTrack<TBinding, TMixerBehaviour> : TrackAsset
         where TBinding : Component
-        where TMixerBehaviour : TweenMixerPlayableBehaviour<TBinding, TBehaviour>, new()
-        where TBehaviour : TweenPlayableBehaviour<TBinding>, new() {
+        where TMixerBehaviour : PlayableBehaviour, new() {
         /// <summary>
         /// Mixerの生成
         /// </summary>
         public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount) {
             foreach (var timelineClip in GetClips()) {
                 if (timelineClip.asset is ITweenPlayableClip clip) {
+                    clip.Initialize(this);
                     clip.SetDuration(timelineClip.duration);
 #if UNITY_EDITOR
                     if (!string.IsNullOrEmpty(clip.DisplayName)) {

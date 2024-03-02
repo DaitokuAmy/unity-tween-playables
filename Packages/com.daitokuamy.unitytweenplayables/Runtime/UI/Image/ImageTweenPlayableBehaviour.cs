@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// ImageをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class ImageTweenPlayableBehaviour : TweenPlayableBehaviour<Image> {
+    public class ImageTweenPlayableBehaviour : TweenPlayableBehaviour<Image, ImageTweenPlayableTrack> {
         public ColorTweenParameter color;
         public FloatTweenParameter fillAmount;
 

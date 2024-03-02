@@ -1,14 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 namespace UnityTweenPlayables.Core {
     /// <summary>
     /// TweenPlayable用のMixerPlayableBehaviour基底
     /// </summary>
-    public abstract class TweenMixerPlayableBehaviour<TBinding, TBehaviour> : PlayableBehaviour
+    public abstract class TweenMixerPlayableBehaviour<TBinding, TTrack, TBehaviour> : PlayableBehaviour
         where TBinding : Component
-        where TBehaviour : TweenPlayableBehaviour<TBinding>, new() {
+        where TTrack : TrackAsset
+        where TBehaviour : TweenPlayableBehaviour<TBinding, TTrack>, new() {
         private TBinding _targetComponent;
         private List<ScriptPlayable<TBehaviour>> _playables = new();
 

@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// CanvasGroupをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class CanvasGroupTweenPlayableBehaviour : TweenPlayableBehaviour<CanvasGroup> {
+    public class CanvasGroupTweenPlayableBehaviour : TweenPlayableBehaviour<CanvasGroup, CanvasGroupTweenPlayableTrack> {
         public FloatTweenParameter alpha;
 
         /// <summary>

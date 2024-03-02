@@ -1,5 +1,4 @@
 using System.ComponentModel;
-using UnityEngine;
 using UnityEngine.Timeline;
 using UnityEngine.UI;
 using UnityTweenPlayables.Core;
@@ -12,5 +11,5 @@ namespace UnityTweenPlayables.UI {
     [TrackClipType(typeof(HorizontalLayoutGroupTweenPlayableClip))]
     [TrackColor(Constant.TrackColorUIRed, Constant.TrackColorUIGreen, Constant.TrackColorUIBlue)]
     [DisplayName("Unity Tween Playables/UI/LayoutGroup/HorizontalLayoutGroup Track")]
-    public class HorizontalLayoutGroupTweenPlayableTrack : TweenPlayableTrack<HorizontalLayoutGroup, HorizontalLayoutGroupTweenMixerPlayableBehaviour, HorizontalLayoutGroupTweenPlayableBehaviour> {}
+    public class HorizontalLayoutGroupTweenPlayableTrack : TweenPlayableTrack<HorizontalLayoutGroup, HorizontalLayoutGroupTweenMixerPlayableBehaviour> {}
 }

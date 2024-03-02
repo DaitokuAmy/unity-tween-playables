@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// HorizontalLayoutGroupをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class HorizontalLayoutGroupTweenPlayableBehaviour : TweenPlayableBehaviour<HorizontalLayoutGroup> {
+    public class HorizontalLayoutGroupTweenPlayableBehaviour : TweenPlayableBehaviour<HorizontalLayoutGroup, HorizontalLayoutGroupTweenPlayableTrack> {
         public RectOffsetTweenParameter padding;
         public FloatTweenParameter spacing;
 

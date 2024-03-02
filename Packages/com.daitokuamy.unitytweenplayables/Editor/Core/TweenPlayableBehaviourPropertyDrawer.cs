@@ -6,7 +6,7 @@ namespace UnityTweenPlayables.Editor.Core {
     /// <summary>
     /// TweenPlayableBehaviour用のエディタ拡張
     /// </summary>
-    [CustomPropertyDrawer(typeof(TweenPlayableBehaviour<>), true)]
+    [CustomPropertyDrawer(typeof(TweenPlayableBehaviour<,>), true)]
     public class TweenPlayableBehaviourPropertyDrawer : PropertyDrawer {
         /// <summary>
         /// GUI描画

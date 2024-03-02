@@ -11,5 +11,5 @@ namespace UnityTweenPlayables.UI {
     [TrackClipType(typeof(VolumeTweenPlayableClip))]
     [TrackColor(Constant.TrackColorGeneralRed, Constant.TrackColorGeneralGreen, Constant.TrackColorGeneralBlue)]
     [DisplayName("Unity Tween Playables/General/Volume Track")]
-    public class VolumeTweenPlayableTrack : TweenPlayableTrack<Volume, VolumeTweenMixerPlayableBehaviour, VolumeTweenPlayableBehaviour> {}
+    public class VolumeTweenPlayableTrack : TweenPlayableTrack<Volume, VolumeTweenMixerPlayableBehaviour> {}
 }

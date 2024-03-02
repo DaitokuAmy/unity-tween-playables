@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// RectMask2DをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class RectMask2DTweenPlayableBehaviour : TweenPlayableBehaviour<RectMask2D> {
+    public class RectMask2DTweenPlayableBehaviour : TweenPlayableBehaviour<RectMask2D, RectMask2DTweenPlayableTrack> {
         public Vector4TweenParameter padding;
         public Vector2TweenParameter softness;
 

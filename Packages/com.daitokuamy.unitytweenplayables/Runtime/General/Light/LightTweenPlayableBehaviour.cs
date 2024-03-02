@@ -7,7 +7,7 @@ namespace UnityTweenPlayables.UI {
     /// LightをTweenで動かすためのPlayableBehaviour
     /// </summary>
     [Serializable]
-    public class LightTweenPlayableBehaviour : TweenPlayableBehaviour<Light> {
+    public class LightTweenPlayableBehaviour : TweenPlayableBehaviour<Light, LightTweenPlayableTrack> {
         public ColorTweenParameter color;
         public FloatTweenParameter intensity;
         public FloatTweenParameter shadowStrength;

@@ -11,5 +11,5 @@ namespace UnityTweenPlayables.UI {
     [TrackClipType(typeof(ImageTweenPlayableClip))]
     [TrackColor(Constant.TrackColorUIRed, Constant.TrackColorUIGreen, Constant.TrackColorUIBlue)]
     [DisplayName("Unity Tween Playables/UI/Image Track")]
-    public class ImageTweenPlayableTrack : TweenPlayableTrack<Image, ImageTweenMixerPlayableBehaviour, ImageTweenPlayableBehaviour> {}
+    public class ImageTweenPlayableTrack : TweenPlayableTrack<Image, ImageTweenMixerPlayableBehaviour> {}
 }
