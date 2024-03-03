@@ -7,7 +7,7 @@
 - 各種ClipはAnimationTrackのように重ねる事でブレンド可能な設計になっています
 - 各種ClipはAnimation Extrapolation(直前の値反映、直後の値反映の指定)に対応しています
 - 基本的なイージング関数の他に、Template指定によるオリジナルカーブの指定、直接入力カーブの指定に対応しています
-- 以下のクラスを継承する事で、比較的容易に拡張できるようにしています
+- 以下のクラスを継承する事で、比較的容易に独自のTrackを追加できるようにしています
   - TweenPlayableTrack
   - TweenPlayableClip
   - TweenPlayableBehaviour
