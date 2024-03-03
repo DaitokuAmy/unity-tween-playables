@@ -42,7 +42,7 @@ namespace UnityTweenPlayables.General {
 
 #if UNITY_EDITOR
             // Editor用Materialのキャッシュを削除
-            if (Application.isEditor) {
+            if (!Application.isPlaying) {
                 foreach (var materials in RendererEditorCache.CloneMaterials.Values) {
                     foreach (var material in materials) {
                         if (material == null) {
@@ -83,9 +83,13 @@ namespace UnityTweenPlayables.General {
                     // MaterialをCloneして設定し直す
                     var materials = new List<Material>();
 
-                    // 非再生時は独自でキャッシュする（エラーになるので）
-                    if (!Application.isPlaying) {
+                    // 再生時は通常の取得フロー
+                    if (Application.isPlaying) {
+                        renderer.GetMaterials(materials);
+                    }
 #if UNITY_EDITOR
+                    // 非再生時は独自でキャッシュする（エラーになるので）
+                    else {
                         if (!RendererEditorCache.CloneMaterials.TryGetValue(renderer, out var cloneMaterials)) {
                             renderer.GetSharedMaterials(materials);
                             for (var i = 0; i < materials.Count; i++) {
@@ -98,12 +102,8 @@ namespace UnityTweenPlayables.General {
                         else {
                             materials = cloneMaterials;
                         }
+                    }
 #endif
-                    }
-                    // 再生時は通常の取得フロー
-                    else {
-                        renderer.GetMaterials(materials);
-                    }
 
                     _sharedMaterialsDict.Add(renderer, materials);
                 }
