@@ -24,7 +24,7 @@
 ```json
 {
     "dependencies": {
-        "com.daitokuamy.unityrenametool": "https://github.com/DaitokuAmy/unity-tween-playables.git?path=/Packages/com.daitokuamy.unitytweenplayables"
+        "com.daitokuamy.unitytweenplayables": "https://github.com/DaitokuAmy/unity-tween-playables.git?path=/Packages/com.daitokuamy.unitytweenplayables"
     }
 }
 ```
