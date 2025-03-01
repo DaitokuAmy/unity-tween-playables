@@ -11,14 +11,31 @@ namespace UnityTweenPlayables.Core {
     public abstract class TweenParameter<T> {
         [Tooltip("有効か")]
         public bool active;
+        [Tooltip("補間パラメータ")]
+        public EaseParameter ease;
+
+        /// <summary>
+        /// 補間値の取得
+        /// </summary>
+        public abstract T Evaluate(object key, float t);
+
+        /// <summary>
+        /// 相対値の取得
+        /// </summary>
+        public abstract T GetRelativeValue(object key, T val);
+    }
+    
+    /// <summary>
+    /// TweenAnimation用のパラメータ基底
+    /// </summary>
+    [Serializable]
+    public abstract class ValueTweenParameter<T> : TweenParameter<T> {
+        [Tooltip("相対値モードか")]
+        public bool relative;
         [Tooltip("開始値")]
         public T start;
         [Tooltip("終了値")]
         public T end;
-        [Tooltip("補間パラメータ")]
-        public EaseParameter ease;
-        [Tooltip("相対値モードか")]
-        public bool relative;
 
         private Dictionary<object, T> _initialValueDict = new();
 
@@ -40,23 +57,29 @@ namespace UnityTweenPlayables.Core {
 
             _initialValueDict[key] = val;
         }
+    }
 
-        /// <summary>
-        /// 補間値の取得
-        /// </summary>
-        public abstract T Evaluate(object key, float t);
+    /// <summary>
+    /// 進捗用補間パラメータ
+    /// </summary>
+    [Serializable]
+    public class ProgressTweenParameter : TweenParameter<float> {
+        /// <inheritdoc/>
+        public override float Evaluate(object key, float t) {
+            return Mathf.LerpUnclamped(0.0f, 1.0f, ease.Evaluate(t));
+        }
 
-        /// <summary>
-        /// 相対値の取得
-        /// </summary>
-        public abstract T GetRelativeValue(object key, T val);
+        /// <inheritdoc/>
+        public override float GetRelativeValue(object key, float value) {
+            return value;
+        }
     }
 
     /// <summary>
     /// 浮動小数点用補間パラメータ
     /// </summary>
     [Serializable]
-    public class FloatTweenParameter : TweenParameter<float> {
+    public class FloatTweenParameter : ValueTweenParameter<float> {
         /// <inheritdoc/>
         public override float Evaluate(object key, float t) {
             if (relative) {
@@ -76,7 +99,7 @@ namespace UnityTweenPlayables.Core {
     /// 整数用補間パラメータ
     /// </summary>
     [Serializable]
-    public class IntTweenParameter : TweenParameter<int> {
+    public class IntTweenParameter : ValueTweenParameter<int> {
         /// <inheritdoc/>
         public override int Evaluate(object key, float t) {
             if (relative) {
@@ -96,7 +119,7 @@ namespace UnityTweenPlayables.Core {
     /// Vector2用補間パラメータ
     /// </summary>
     [Serializable]
-    public class Vector2TweenParameter : TweenParameter<Vector2> {
+    public class Vector2TweenParameter : ValueTweenParameter<Vector2> {
         /// <summary>
         /// 軸マスク
         /// </summary>
@@ -128,7 +151,7 @@ namespace UnityTweenPlayables.Core {
     /// Vector3用補間パラメータ
     /// </summary>
     [Serializable]
-    public class Vector3TweenParameter : TweenParameter<Vector3> {
+    public class Vector3TweenParameter : ValueTweenParameter<Vector3> {
         /// <summary>
         /// 軸マスク
         /// </summary>
@@ -161,7 +184,7 @@ namespace UnityTweenPlayables.Core {
     /// Vector4用補間パラメータ
     /// </summary>
     [Serializable]
-    public class Vector4TweenParameter : TweenParameter<Vector4> {
+    public class Vector4TweenParameter : ValueTweenParameter<Vector4> {
         /// <summary>
         /// 軸マスク
         /// </summary>
@@ -195,7 +218,7 @@ namespace UnityTweenPlayables.Core {
     /// Rect用補間パラメータ
     /// </summary>
     [Serializable]
-    public class RectTweenParameter : TweenParameter<Rect> {
+    public class RectTweenParameter : ValueTweenParameter<Rect> {
         /// <summary>
         /// 軸マスク
         /// </summary>
@@ -230,7 +253,7 @@ namespace UnityTweenPlayables.Core {
     /// RectOffset用補間パラメータ
     /// </summary>
     [Serializable]
-    public class RectOffsetTweenParameter : TweenParameter<RectOffset> {
+    public class RectOffsetTweenParameter : ValueTweenParameter<RectOffset> {
         /// <summary>
         /// 軸マスク
         /// </summary>
@@ -265,7 +288,7 @@ namespace UnityTweenPlayables.Core {
     /// Color用補間パラメータ
     /// </summary>
     [Serializable]
-    public class ColorTweenParameter : TweenParameter<Color> {
+    public class ColorTweenParameter : ValueTweenParameter<Color> {
         /// <summary>
         /// 軸マスク
         /// </summary>
@@ -323,7 +346,7 @@ namespace UnityTweenPlayables.Core {
     /// TextMeshProのVertexGradient用補間パラメータ
     /// </summary>
     [Serializable]
-    public class VertexGradientTweenParameter : TweenParameter<VertexGradient> {
+    public class VertexGradientTweenParameter : ValueTweenParameter<VertexGradient> {
         /// <summary>
         /// コンストラクタ
         /// </summary>

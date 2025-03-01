@@ -123,5 +123,12 @@ namespace UnityTweenPlayables.Core {
             
             mixer.Blend(tweenParameter.Evaluate(component, progress), weight);
         }
+
+        /// <summary>
+        /// ValueMixerへのブレンド反映
+        /// </summary>
+        protected static void BlendValueMixer<T>(ValueMixer<T> mixer, T parameter, float weight) {
+            mixer.Blend(parameter, weight);
+        }
     }
 }

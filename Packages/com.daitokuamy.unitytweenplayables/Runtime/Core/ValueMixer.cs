@@ -88,6 +88,17 @@ namespace UnityTweenPlayables.Core {
     }
 
     /// <summary>
+    /// Quaternion用補間パラメータ
+    /// </summary>
+    [Serializable]
+    public class QuaternionValueMixer : ValueMixer<Quaternion> {
+        /// <inheritdoc/>
+        protected override Quaternion Add(Quaternion baseValue, Quaternion addValue, float weight) {
+            return baseValue * Quaternion.Slerp(Quaternion.identity, addValue, weight);
+        }
+    }
+
+    /// <summary>
     /// Vector4用補間パラメータ
     /// </summary>
     [Serializable]
