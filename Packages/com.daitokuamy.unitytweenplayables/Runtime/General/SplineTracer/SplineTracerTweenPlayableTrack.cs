@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.Timeline;
+using UnityTweenPlayables.Components;
 using UnityTweenPlayables.Core;
 
 namespace UnityTweenPlayables.General {

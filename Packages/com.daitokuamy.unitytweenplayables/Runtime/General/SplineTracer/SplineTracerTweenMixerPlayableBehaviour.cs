@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityTweenPlayables.Components;
 using UnityTweenPlayables.Core;
 
 namespace UnityTweenPlayables.General {

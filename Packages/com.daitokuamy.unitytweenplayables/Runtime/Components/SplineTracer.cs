@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Splines;
 
-namespace UnityTweenPlayables.General {
+namespace UnityTweenPlayables.Components {
     /// <summary>
     /// TransformをSplineContainerのカーブで移動操作させるためのコンポーネント
     /// </summary>
