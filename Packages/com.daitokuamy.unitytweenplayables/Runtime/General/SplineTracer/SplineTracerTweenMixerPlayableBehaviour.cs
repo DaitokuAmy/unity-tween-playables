@@ -15,7 +15,7 @@ namespace UnityTweenPlayables.General {
         /// 値の反映処理
         /// </summary>
         protected override void Apply(SplineTracer component, SplineTracerTweenPlayableBehaviour lastBehaviour) {
-            component.Evaluate(lastBehaviour.splineIndex, _progress);
+            component.Evaluate(lastBehaviour.splineIndex, _progress, lastBehaviour.startKnotIndex, lastBehaviour.endKnotIndex);
         }
 
         /// <summary>
