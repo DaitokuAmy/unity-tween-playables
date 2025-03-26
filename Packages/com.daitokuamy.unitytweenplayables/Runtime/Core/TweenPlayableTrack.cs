@@ -5,7 +5,7 @@ using UnityEngine.Timeline;
 using UnityEditor;
 #endif
 
-namespace UnityTweenPlayables.Core {    
+namespace UnityTweenPlayables.Core {
     /// <summary>
     /// TweenPlayable用のTrackAsset基底
     /// </summary>
@@ -14,7 +14,7 @@ namespace UnityTweenPlayables.Core {
         where TMixerBehaviour : PlayableBehaviour, ITweenMixerPlayableBehaviour, new() {
         /// <summary>Clipの表示名(nullならデフォルト)</summary>
         public virtual string ClipDisplayName => null;
-        
+
         /// <summary>
         /// Mixerの生成
         /// </summary>
@@ -61,9 +61,22 @@ namespace UnityTweenPlayables.Core {
                     continue;
                 }
 
+                if (!CheckAddDriver(component, itr)) {
+                    continue;
+                }
+
                 driver.AddFromName<TBinding>(component.gameObject, itr.propertyPath);
             }
 #endif
         }
+
+#if UNITY_EDITOR
+        /// <summary>
+        /// プロパティをプレビュー中にキャッシュするか判定(previewを戻す際に値が戻るか)
+        /// </summary>
+        protected virtual bool CheckAddDriver(TBinding component, SerializedProperty property) {
+            return true;
+        }
+#endif
     }
 }
