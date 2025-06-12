@@ -69,6 +69,16 @@ namespace UnityTweenPlayables.Core {
             }
 #endif
         }
+        
+        /// <summary>
+        /// Clip生成時の通知
+        /// </summary>
+        protected override void OnCreateClip(TimelineClip clip) {
+            base.OnCreateClip(clip);
+
+            // デフォルトのクリップ長さを上書き
+            clip.duration = 0.5;
+        }
 
 #if UNITY_EDITOR
         /// <summary>
