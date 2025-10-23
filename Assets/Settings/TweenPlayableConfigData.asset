@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53dedb5c272e9dc40afaab682c6db665, type: 3}
-  m_Name: UnityTweenPlayablesConfig
+  m_Name: TweenPlayableConfigData
   m_EditorClassIdentifier: 
   templateCurves:
   - key: Test
@@ -20,26 +20,17 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: 2
+        outSlope: 2
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.18825391
-        value: 0.915753
-        inSlope: 1.1314273
-        outSlope: 1.1314273
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.6472623
-        value: 0.060888648
-        inSlope: -0.19380593
-        outSlope: -0.19380593
+        time: 0.5232919
+        value: 0.20332521
+        inSlope: 1.3095806
+        outSlope: 1.3095806
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -63,31 +54,30 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  Parameter:
-    mode: 0
-    easeType: 0
-    templateCurveKey: AAA
-    customCurve:
-      serializedVersion: 2
-      m_Curve: []
+      - serializedVersion: 3
+        time: 0.22942328
+        value: 0.7015084
+        inSlope: 1.2031388
+        outSlope: 1.2031388
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4

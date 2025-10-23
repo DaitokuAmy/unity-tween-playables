@@ -7,7 +7,6 @@ namespace UnityTweenPlayables.Core {
     /// <summary>
     /// TweenPlayable用の設定データ
     /// </summary>
-    [CreateAssetMenu(menuName = "Unity Tween Playables/Config Data", fileName = "UnityTweenPlayablesConfig.asset")]
     internal class TweenPlayableConfigData : ScriptableObject, ITweenPlayableConfig {
         /// <summary>
         /// テンプレート用カーブ情報
@@ -53,10 +52,10 @@ namespace UnityTweenPlayables.Core {
 
 #if UNITY_EDITOR
         /// <summary>
-        /// 生成時の処理
+        /// アクティブ時処理
         /// </summary>
-        private void Awake() {
-            TweenPlayableConfig.Reload();
+        private void OnEnable() {
+            TweenPlayableConfig.SetInstance(this);
         }
         
         /// <summary>
@@ -64,7 +63,7 @@ namespace UnityTweenPlayables.Core {
         /// </summary>
         private void OnValidate() {
             RefreshTemplateCurveCache();
-            TweenPlayableConfig.Reload();
+            TweenPlayableConfig.SetInstance(this);
         }
 #endif
 
