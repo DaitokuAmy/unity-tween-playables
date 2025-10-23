@@ -44,7 +44,14 @@ namespace UnityTweenPlayables.Core {
                 }
 
 #if UNITY_EDITOR
-                var data = PlayerSettings.GetPreloadedAssets().OfType<TweenPlayableConfigData>().FirstOrDefault();
+                var data = Resources.FindObjectsOfTypeAll<TweenPlayableConfigData>().FirstOrDefault();
+                if (data != null) {
+                    var preloadedAssets = PlayerSettings.GetPreloadedAssets().ToList();
+                    preloadedAssets.Add(data);
+                    PlayerSettings.SetPreloadedAssets(preloadedAssets.ToArray());
+                    AssetDatabase.SaveAssets();
+                }
+
                 s_instance = data;
 #endif
 
