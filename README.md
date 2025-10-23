@@ -34,18 +34,18 @@ https://github.com/DaitokuAmy/unity-tween-playables.git?path=/Packages/com.daito
 ## 使い方
 #### 基本的なClipの追加方法
 1. Playable Directorの用意  
-  TimelineAssetも必要に応じて作成、設定します
+  TimelineAssetも必要に応じて作成、設定します  
   ![image](https://github.com/DaitokuAmy/unity-tween-playables/assets/6957962/d993d2e1-8010-4390-9bfe-61a0f2cc8b2e)
-2. Trackの追加から Unity Tween Playables の中にある任意のTrackを選択し、Tween操作可能なTrackを追加します
+2. Trackの追加から Unity Tween Playables の中にある任意のTrackを選択し、Tween操作可能なTrackを追加します  
   ![image](https://github.com/DaitokuAmy/unity-tween-playables/assets/6957962/59c8e322-a2f7-4ae9-ade4-8480d31353f2)
-3. Trackに操作対象のComponentを追加し、タイムライン上を右クリックして Add ～ Tween Playable Clip を選択してキー入力用のClipを追加します
+3. Trackに操作対象のComponentを追加し、タイムライン上を右クリックして Add ～ Tween Playable Clip を選択してキー入力用のClipを追加します  
   ![image](https://github.com/DaitokuAmy/unity-tween-playables/assets/6957962/05b6b8b4-fce5-4d9c-9fbc-63535ce1cfc4)
-4. 追加したClipを選択し、Inspectorウィンドウからアニメーションする値を指定します
+4. 追加したClipを選択し、Inspectorウィンドウからアニメーションする値を指定します  
   ![image](https://github.com/DaitokuAmy/unity-tween-playables/assets/6957962/187b3141-f0c3-4b10-8f35-513a8e0685a6)
-5. 完成です
+5. 完成です  
 ![sample](https://github.com/DaitokuAmy/unity-tween-playables/assets/6957962/3ebdfd55-2bf3-4650-9411-d6432d68715e)
 #### Templateカーブの使用方法
-1. 「Assets / Create > Unity Tween Playables > Config Data」と選択して設定ファイルを任意の場所に作成し、以下のようにカーブを追加します
+1. 「Assets / Create > Unity Tween Playables > Config Data」と選択して設定ファイルを任意の場所に作成し、以下のようにカーブを追加します  
   ![image](https://github.com/user-attachments/assets/c215f6a2-c4af-4049-b3f2-c0820d107b67)
-2. Clip選択時のInspectorより、Easeの指定をMode:Templateにする事で、Configに指定したカーブが選択できるようになります
+2. Clip選択時のInspectorより、Easeの指定をMode:Templateにする事で、Configに指定したカーブが選択できるようになります  
   ![image](https://github.com/DaitokuAmy/unity-tween-playables/assets/6957962/24f456d2-9279-4d37-896e-e9e18bffafe3)
