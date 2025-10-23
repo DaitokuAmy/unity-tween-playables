@@ -45,7 +45,7 @@ https://github.com/DaitokuAmy/unity-tween-playables.git?path=/Packages/com.daito
 5. 完成です
 ![sample](https://github.com/DaitokuAmy/unity-tween-playables/assets/6957962/3ebdfd55-2bf3-4650-9411-d6432d68715e)
 #### Templateカーブの使用方法
-1. 任意のResourcesフォルダを右クリックし、「Create > Unity Tween Playables > Config Data」と選択して設定ファイルを作成し、以下のようにカーブを追加します
-  ![image](https://github.com/DaitokuAmy/unity-tween-playables/assets/6957962/3d1709df-be60-43a2-9936-19966a65ed36)
+1. 「Assets / Create > Unity Tween Playables > Config Data」と選択して設定ファイルを任意の場所に作成し、以下のようにカーブを追加します
+  ![image](https://github.com/user-attachments/assets/c215f6a2-c4af-4049-b3f2-c0820d107b67)
 2. Clip選択時のInspectorより、Easeの指定をMode:Templateにする事で、Configに指定したカーブが選択できるようになります
-   ![image](https://github.com/DaitokuAmy/unity-tween-playables/assets/6957962/24f456d2-9279-4d37-896e-e9e18bffafe3)
+  ![image](https://github.com/DaitokuAmy/unity-tween-playables/assets/6957962/24f456d2-9279-4d37-896e-e9e18bffafe3)
