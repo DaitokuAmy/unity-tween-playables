@@ -2,10 +2,29 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 #if UNITY_EDITOR
+using System.Reflection;
 using UnityEditor;
 #endif
 
 namespace UnityTweenPlayables.Core {
+#if UNITY_EDITOR
+    /// <summary>
+    /// TimelineClipの内部APIアクセス用クラス
+    /// </summary>
+    internal static class TimelineClipUtility {
+        private static readonly MethodInfo SetPostExtrapolationModeMethod = typeof(TimelineClip)
+            .GetProperty(nameof(TimelineClip.postExtrapolationMode))
+            ?.GetSetMethod(true);
+
+        /// <summary>
+        /// Post-Extrapolationを設定
+        /// </summary>
+        public static void SetPostExtrapolationMode(TimelineClip clip, TimelineClip.ClipExtrapolation mode) {
+            SetPostExtrapolationModeMethod?.Invoke(clip, new object[] { mode });
+        }
+    }
+#endif
+
     /// <summary>
     /// TweenPlayable用のTrackAsset基底
     /// </summary>
@@ -78,6 +97,11 @@ namespace UnityTweenPlayables.Core {
 
             // デフォルトのクリップ長さを上書き
             clip.duration = 0.5;
+
+            // デフォルトの Post-Extrapolation を Hold に設定
+#if UNITY_EDITOR
+            TimelineClipUtility.SetPostExtrapolationMode(clip, TimelineClip.ClipExtrapolation.Hold);
+#endif
         }
 
 #if UNITY_EDITOR
