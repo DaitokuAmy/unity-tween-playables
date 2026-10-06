@@ -39,7 +39,7 @@ namespace UnityTweenPlayables.Core {
                     var curve = TweenPlayableConfig.Instance.FindTemplateCurve(templateCurveKey);
                     return curve?.Evaluate(t) ?? t;
                 case Mode.Custom:
-                    return customCurve.Evaluate(t);
+                    return customCurve?.Evaluate(t) ?? t;
             }
 
             return t;

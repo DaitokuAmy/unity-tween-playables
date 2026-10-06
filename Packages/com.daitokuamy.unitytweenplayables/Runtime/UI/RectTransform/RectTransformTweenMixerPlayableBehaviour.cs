@@ -60,13 +60,13 @@ namespace UnityTweenPlayables.UI {
         /// ブレンド処理
         /// </summary>
         protected override void Blend(RectTransform component, RectTransformTweenPlayableBehaviour behaviour, float weight, float progress) {
-            BlendValueMixer(_anchoredPositionMixer, behaviour.anchoredPosition, behaviour, weight, progress);
-            BlendValueMixer(_sizeDeltaMixer, behaviour.sizeDelta, behaviour, weight, progress);
-            BlendValueMixer(_anchorMinMixer, behaviour.anchorMin, behaviour, weight, progress);
-            BlendValueMixer(_anchorMaxMixer, behaviour.anchorMax, behaviour, weight, progress);
-            BlendValueMixer(_pivotMixer, behaviour.pivot, behaviour, weight, progress);
-            BlendValueMixer(_rotationMixer, behaviour.rotation, behaviour, weight, progress);
-            BlendValueMixer(_scaleMixer, behaviour.scale, behaviour, weight, progress);
+            BlendValueMixer(_anchoredPositionMixer, behaviour.anchoredPosition, component, weight, progress);
+            BlendValueMixer(_sizeDeltaMixer, behaviour.sizeDelta, component, weight, progress);
+            BlendValueMixer(_anchorMinMixer, behaviour.anchorMin, component, weight, progress);
+            BlendValueMixer(_anchorMaxMixer, behaviour.anchorMax, component, weight, progress);
+            BlendValueMixer(_pivotMixer, behaviour.pivot, component, weight, progress);
+            BlendValueMixer(_rotationMixer, behaviour.rotation, component, weight, progress);
+            BlendValueMixer(_scaleMixer, behaviour.scale, component, weight, progress);
         }
     }
 }

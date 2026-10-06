@@ -34,7 +34,7 @@ namespace UnityTweenPlayables.UI {
         /// </summary>
         protected override void CleanupInternal(TextMeshProUGUI playerData) {
             if (playerData != null) {
-                playerData.maxVisibleCharacters = int.MaxValue;
+                playerData.maxVisibleCharacters = (int)typewriteProgress.GetInitialValue(playerData);
             }
         }
     }

@@ -64,8 +64,6 @@ namespace UnityTweenPlayables.Core {
                 }
             }
 
-            var activeInputCount = 0;
-            var lastBehaviour = default(TBehaviour);
             var lastActiveBehaviour = default(TBehaviour);
             
             // ブレンドに必要なパラメータ計算
@@ -81,7 +79,6 @@ namespace UnityTweenPlayables.Core {
 
                 lastActiveBehaviour = behaviour;
                 Blend(_targetComponent, behaviour, inputWeight, progress);
-                activeInputCount++;
             }
 
             // 値の反映
@@ -116,11 +113,12 @@ namespace UnityTweenPlayables.Core {
         /// <summary>
         /// ValueMixerへのブレンド反映
         /// </summary>
-        protected static void BlendValueMixer<T>(ValueMixer<T> mixer, TweenParameter<T> tweenParameter, object component, float weight, float progress) {
+        protected static void BlendValueMixer<T>(ValueMixer<T> mixer, ValueTweenParameter<T> tweenParameter, object component, float weight, float progress) {
             if (!tweenParameter.active) {
                 return;
             }
-            
+
+            mixer.SetBaseValue(tweenParameter.GetInitialValue(component));
             mixer.Blend(tweenParameter.Evaluate(component, progress), weight);
         }
 

@@ -28,7 +28,7 @@ namespace UnityTweenPlayables.General {
         /// ブレンド処理
         /// </summary>
         protected override void Blend(Renderer component, RendererFloatTweenPlayableBehaviour behaviour, float weight, float progress) {
-            BlendValueMixer(_valueMixer, behaviour.value, behaviour, weight, progress);
+            BlendValueMixer(_valueMixer, behaviour.value, component, weight, progress);
         }
     }
 }

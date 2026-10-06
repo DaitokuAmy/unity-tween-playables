@@ -36,9 +36,9 @@ namespace UnityTweenPlayables.General {
         /// ブレンド処理
         /// </summary>
         protected override void Blend(Transform component, TransformTweenPlayableBehaviour behaviour, float weight, float progress) {
-            BlendValueMixer(_positionMixer, behaviour.position, behaviour, weight, progress);
-            BlendValueMixer(_rotationMixer, behaviour.rotation, behaviour, weight, progress);
-            BlendValueMixer(_scaleMixer, behaviour.scale, behaviour, weight, progress);
+            BlendValueMixer(_positionMixer, behaviour.position, component, weight, progress);
+            BlendValueMixer(_rotationMixer, behaviour.rotation, component, weight, progress);
+            BlendValueMixer(_scaleMixer, behaviour.scale, component, weight, progress);
         }
     }
 }

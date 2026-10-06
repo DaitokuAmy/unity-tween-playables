@@ -24,7 +24,7 @@ namespace UnityTweenPlayables.UI {
             sizeDelta.SetInitialValue(playerData, playerData.sizeDelta);
             anchorMin.SetInitialValue(playerData, playerData.anchorMin);
             anchorMax.SetInitialValue(playerData, playerData.anchorMax);
-            pivot.SetInitialValue(playerData, playerData.sizeDelta);
+            pivot.SetInitialValue(playerData, playerData.pivot);
             rotation.SetInitialValue(playerData, playerData.localEulerAngles);
             scale.SetInitialValue(playerData, playerData.localScale);
         }

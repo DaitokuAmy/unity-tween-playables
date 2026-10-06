@@ -20,7 +20,7 @@ namespace UnityTweenPlayables.Core {
         }
 
         [Tooltip("テンプレートカーブ情報")]
-        public TemplateCurve[] templateCurves;
+        public TemplateCurve[] templateCurves = Array.Empty<TemplateCurve>();
 
         private Dictionary<string, TemplateCurve> _templateCurveDict;
 
@@ -41,6 +41,10 @@ namespace UnityTweenPlayables.Core {
         public AnimationCurve FindTemplateCurve(string key) {
             if (_templateCurveDict == null) {
                 RefreshTemplateCurveCache();
+            }
+
+            if (string.IsNullOrWhiteSpace(key)) {
+                return null;
             }
 
             if (!_templateCurveDict.TryGetValue(key, out var curve)) {
@@ -76,8 +80,12 @@ namespace UnityTweenPlayables.Core {
             }
 
             _templateCurveDict.Clear();
+            if (templateCurves == null) {
+                return;
+            }
+
             foreach (var curve in templateCurves) {
-                if (string.IsNullOrWhiteSpace(curve.key)) {
+                if (curve == null || string.IsNullOrWhiteSpace(curve.key)) {
                     continue;
                 }
 

@@ -40,9 +40,9 @@ namespace UnityTweenPlayables.General {
         /// ブレンド処理
         /// </summary>
         protected override void Blend(Renderer component, RendererStandardTweenPlayableBehaviour behaviour, float weight, float progress) {
-            BlendValueMixer(_mainColorMixer, behaviour.mainColor, behaviour, weight, progress);
-            BlendValueMixer(_mainTextureOffsetMixer, behaviour.mainTextureOffset, behaviour, weight, progress);
-            BlendValueMixer(_mainTextureScaleMixer, behaviour.mainTextureScale, behaviour, weight, progress);
+            BlendValueMixer(_mainColorMixer, behaviour.mainColor, component, weight, progress);
+            BlendValueMixer(_mainTextureOffsetMixer, behaviour.mainTextureOffset, component, weight, progress);
+            BlendValueMixer(_mainTextureScaleMixer, behaviour.mainTextureScale, component, weight, progress);
         }
     }
 }

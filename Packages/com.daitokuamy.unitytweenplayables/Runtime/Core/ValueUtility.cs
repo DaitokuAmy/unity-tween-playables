@@ -74,15 +74,15 @@ namespace UnityTweenPlayables.Core {
                 source.left = baseValue.left;
             }
 
-            if ((mask & (1 << 0)) == 0) {
+            if ((mask & (1 << 1)) == 0) {
                 source.right = baseValue.right;
             }
 
-            if ((mask & (1 << 0)) == 0) {
+            if ((mask & (1 << 2)) == 0) {
                 source.top = baseValue.top;
             }
 
-            if ((mask & (1 << 0)) == 0) {
+            if ((mask & (1 << 3)) == 0) {
                 source.bottom = baseValue.bottom;
             }
 

@@ -36,9 +36,9 @@ namespace UnityTweenPlayables.General {
         /// ブレンド処理
         /// </summary>
         protected override void Blend(Light component, LightTweenPlayableBehaviour behaviour, float weight, float progress) {
-            BlendValueMixer(_colorMixer, behaviour.color, behaviour, weight, progress);
-            BlendValueMixer(_intensityMixer, behaviour.intensity, behaviour, weight, progress);
-            BlendValueMixer(_shadowStrengthMixer, behaviour.shadowStrength, behaviour, weight, progress);
+            BlendValueMixer(_colorMixer, behaviour.color, component, weight, progress);
+            BlendValueMixer(_intensityMixer, behaviour.intensity, component, weight, progress);
+            BlendValueMixer(_shadowStrengthMixer, behaviour.shadowStrength, component, weight, progress);
         }
     }
 }

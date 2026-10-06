@@ -31,8 +31,8 @@ namespace UnityTweenPlayables.UI {
         /// ブレンド処理
         /// </summary>
         protected override void Blend(VerticalLayoutGroup component, VerticalLayoutGroupTweenPlayableBehaviour behaviour, float weight, float progress) {
-            BlendValueMixer(_paddingMixer, behaviour.padding, behaviour, weight, progress);
-            BlendValueMixer(_spacingMixer, behaviour.spacing, behaviour, weight, progress);
+            BlendValueMixer(_paddingMixer, behaviour.padding, component, weight, progress);
+            BlendValueMixer(_spacingMixer, behaviour.spacing, component, weight, progress);
         }
     }
 }

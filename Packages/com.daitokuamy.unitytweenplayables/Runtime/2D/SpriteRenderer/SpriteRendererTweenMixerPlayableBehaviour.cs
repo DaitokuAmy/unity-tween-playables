@@ -30,8 +30,8 @@ namespace UnityTweenPlayables.UI {
         /// ブレンド処理
         /// </summary>
         protected override void Blend(SpriteRenderer component, SpriteRendererTweenPlayableBehaviour behaviour, float weight, float progress) {
-            BlendValueMixer(_colorMixer, behaviour.color, behaviour, weight, progress);
-            BlendValueMixer(_sizeMixer, behaviour.size, behaviour, weight, progress);
+            BlendValueMixer(_colorMixer, behaviour.color, component, weight, progress);
+            BlendValueMixer(_sizeMixer, behaviour.size, component, weight, progress);
         }
     }
 }
