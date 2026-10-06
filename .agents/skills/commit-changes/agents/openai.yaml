@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit Changes"
+  short_description: "Split Git changes into focused, rule-compliant commits"
+  default_prompt: "Use $commit-changes to inspect the current Git diff and create focused commits."

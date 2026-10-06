@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release Unity Package"
+  short_description: "Version, commit, push, and tag the Unity package"
+  default_prompt: "Use $release-unity-package to release the Unity package from the current changes."
